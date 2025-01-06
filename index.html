@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="WDD231 - Cindy Jane Vick">
+    <meta name="author" content="Cindy Jane Vick">
+    <meta name="keywords" content="WDD231 ">
+    <title>WDD231 - Home - Cindy Jane Vick</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/index-large.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    
+    <script src="scripts/index.js" defer></script>
+   
+    
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <picture>
+               <img src="images/me-profile.webp" alt="profile pic" aria-label="Cindy Jane Vick" style="width:auto;">
+             </picture>
+            <h1>Cindy Jane Vick</h1>
+           
+        </div>
+
+        <div>
+            <button type="button" id="menu" aria-label="Hamburger Button"></button>
+        </div>
+
+        <nav class="navigation">
+            <a href="./index.html" class="active" aria-label="Home"> Home </a>
+            <a href="#" aria-label="Chamber"> Chamber </a>
+            <a href="#" target="blank" aria-label="GitHub"> GitHub </a>
+            <a href="https://www.linkedin.com/in/cindyjanevick/" target="_blank" aria-label="LinkedIn">                 LinkedIn </a>
+        </nav>
+    </header>
+
+    <main id="grid-container">
+        <section class="rounded-box1">
+            <h2>Course Work</h2>
+            <div id="course-container">
+
+            </div>
+        </section>
+
+        <section class="rounded-box2">
+            <h2>Misawa , Japan</h2>
+            <figure>
+                <picture>
+                    <source media="(min-width:650px)" srcset="images/misawa.webp">
+                    <source media="(min-width:465px)" srcset="images/misawa150.webp">
+                    <img src="images/misawa.webp" alt="Misawa" aria-label="Cindy Vick" style="width:auto;">
+                </picture>
+                <figcaption>Misawa, Japan</figcaption>
+            </figure>
+        </section>
+
+        <section class="rounded-box3">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div>
+                <nav class="selector">
+                    <a href="#" id="all" aria-label="Show All Classes"> All Courses</a>
+                    <a href="#" id="cse" aria-label="Show CSE Classes"> CSE Courses</a>
+                    <a href="#" id="wdd" aria-label="Show WDD Classes"> WDD Courses</a>
+                </nav>
+            </div>
+            <div class="container">
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> &#127803; Cindy Jane Vick &#127803; Japan </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
