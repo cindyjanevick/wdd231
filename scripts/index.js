@@ -80,7 +80,6 @@ const courses = [
 
 const doc = document;
 
-// Call the createCoursesCard() function (defined below)
 createCoursesCard(courses);
 displayCourseWork(courses);
 
@@ -88,8 +87,6 @@ const alllink = doc.querySelector("#all");
 const cselink = doc.querySelector("#cse");
 const wddlink = doc.querySelector("#wdd");
 
-// Anonymous () function definitions
-// All button - get all courses
 alllink.addEventListener('click', () => {
     console.clear();
     // console.log("Clicked All");
@@ -118,8 +115,6 @@ wddlink.addEventListener('click', () => {
 })
 
 function displayCourseWork(courses) {
-    // console.clear();
-    // clear out last selected list of courses
     let creditTotal = 0;
 
     doc.querySelector("#course-container").innerHTML = "";
@@ -132,8 +127,6 @@ function displayCourseWork(courses) {
 
         let classtitle = `${course.subject} ${course.number} - ${course.title}`;
         let classcredits = course.credits;
-        // console.log(`${classtitle} with ${classcredits} credits: total ${creditTotal}`);
-
         let infoText = doc.createElement("p");
         infoText.classList.add("courses");
         infoText.innerHTML = `${classtitle}`;
@@ -160,17 +153,13 @@ function createCoursesCard(filteredcourses) {
    
     doc.querySelector(".container").innerHTML = "";
 
-    // Foreach Subject in the courses Array, do the following
     filteredcourses.forEach(course => {
-
-        // Has the course been completed?
+       
         let done = course.completed;
-        // console.log(done);
-
+        
         let card = doc.createElement("div");
         card.classList.add("card");
-        // Above - add class="card" to the above <div class="card">
-
+        
         let coursename = doc.createElement("p");
         if (done == true) {
             coursename.classList.add("done");
@@ -180,17 +169,14 @@ function createCoursesCard(filteredcourses) {
         }
 
         let courseNameStr = `${course.subject}${course.number}`
-        // console.log(courseNameStr);
+        
         coursename.innerHTML = courseNameStr;
 
         card.appendChild(coursename);
-        // console.log(coursename);
-
-        // console.log(card);
+        
         doc.querySelector(".container").appendChild(coursename);
     })
 }
-
 
 
 const hamButton = document.querySelector('#menu');
@@ -200,7 +186,7 @@ hamButton.addEventListener('click', () => {
 	navigation.classList.toggle('open');
 	hamButton.classList.toggle('open');
 });
-// Set the current year in the footer
+
 document.addEventListener("DOMContentLoaded", function() {
     const currentYearSpan = document.getElementById("currentyear");
     const lastModifiedSpan = document.getElementById("lastModified");
@@ -208,6 +194,5 @@ document.addEventListener("DOMContentLoaded", function() {
     const currentYear = new Date().getFullYear();
     currentYearSpan.textContent = currentYear;
 
-    // Display the last modified date
     lastModifiedSpan.textContent = "Last Modification: " + document.lastModified;
 });
