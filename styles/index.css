@@ -1,19 +1,21 @@
 :root {
-    --back_color1: #0D1B2A;
-    --back_color2: #1D5599;
-    --back_color3: #57849C;
-    --accent_color1: #7FC6DE;
-    --accent_color2: #DFDFDF;
-    --accent_color3: #EFEFEF;
-    --accent_color4: #912A2A;
-    --wild_red: #FF0000;
-    --sunburst_red: #CC0000;
-    --active_yellow: #FFFF00;
+--back_color1: #1B4332;     /* Dark Forest Green */
+--back_color2: #2D6A4F;     /* Medium Forest Green */
+--back_color3: #52B788;     /* Light Green */
+--accent_color1: #95D5B2;   /* Pastel Mint Green */
+--accent_color2: #D8F3DC;   /* Pale Green */
+--accent_color3: #FFFFFF;   /* White (for text contrast) */
+--accent_color4: #081C15;   /* Very Dark Green */
+--wild_red: #FF0000;        /* Wild Red */
+--sunburst_red: #CC0000;    /* Darker Red */
+--active_yellow: #FFFF66;   /* Light Yellow */
+ 
 }
 
 * {
     box-sizing: border-box;
-    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+    font-family: "Delius", serif;
+    
 }
 
 body {
@@ -68,7 +70,6 @@ h3 {
     text-align: center;
 }
 
-/* Without unordered list, use flex-direction: row */
 nav {
     max-width: 100%;
     margin: 1rem auto;
@@ -108,18 +109,17 @@ ul li {
 p.done {
     background-color: var(--accent_color4);
     color: white;
-    padding: 5%;
+    padding: 20px 100px;
+    border-radius: 10px;
 }
 
 p.notdone {
     background-color: var(--accent_color2);
     color: var(--back_color1);
-    padding: 5%
+    padding: 20px 100px;
+    border-radius: 10px;
 }
 
-/*-------------------------------------------------*/
-/* ID Selectors                                    */
-/*-------------------------------------------------*/
 
 #grid-container {
     display: block;
@@ -150,13 +150,8 @@ p.notdone {
     display: grid;
     grid-template-columns: 3fr 1fr;
     justify-content: center;
+    
 }
-
-
-
-/*-------------------------------------------------*/
-/* Class Selectors                                 */
-/*-------------------------------------------------*/
 
 .container {
     box-sizing: border-box;
@@ -192,36 +187,50 @@ p.notdone {
 .selector {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     list-style: none;
     background-color: var(--accent_color3);
     margin: 1rem;
 }
 
 .selector a {
-    display: block;
+    /* display: block;
     padding: 0.5rem 1rem;
     margin: 0.5rem;
     text-align: center;
     text-decoration: none;
     background-color: var(--back_color1);
-    color: var(--accent_color3);
+    color: var(--accent_color3); */
+  padding: 10px 20px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: var(--back_color1);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
 }
-
+.selector:active{
+    background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px); 
+}
 .selector a:hover {
-    background-color: var(--accent_color2);
+    /* background-color: var(--accent_color2);
     color: var(--back_color1);
-    font-weight: 700;
+    font-weight: 700; */
+    background-color: #3e8e41
 }
 
-/* when the button is clicked - the open class is toggled (added/removed) */
 .open a {
     display: block;
 }
 
 .active::before {
     content: "📌";
-    /* just a wayfinding symbol for the user */
+    
 }
 
 .head {
@@ -263,13 +272,12 @@ section {
 
 .courses {
     padding-left: 2rem;
-    ;
+    font-family: 'Neuton', serif;;
 }
 
 .active {
     color: var(--active_yellow);
 }
-
 
 
 /* Larger Views ******************************/
@@ -305,7 +313,6 @@ section {
         grid-template-columns: 2fr 1fr;
     }
 
-     /* hide hamburger button */
     #menu {
         display: none;
     }
