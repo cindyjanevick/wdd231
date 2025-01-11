@@ -218,9 +218,7 @@ p.notdone {
   transform: translateY(4px); 
 }
 .selector a:hover {
-    /* background-color: var(--accent_color2);
-    color: var(--back_color1);
-    font-weight: 700; */
+    
     background-color: #3e8e41
 }
 
@@ -232,12 +230,18 @@ p.notdone {
     content: "📌";
     
 }
-
+.profile-pic{
+    width:auto;
+}
+.misawa-image{
+    width:auto;
+}
 .head {
     display: flex;
     justify-content: center;
     margin: 1rem;
     max-width: 100%;
+    text-align: center;
 }
 
 .headtag {
@@ -258,6 +262,9 @@ section {
 
 .rounded-box2 {
     grid-column: 2 / 3;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
 }
 
 .rounded-box3 {
@@ -280,7 +287,7 @@ section {
 }
 
 
-/* Larger Views ******************************/
+/* Larger Views */
 @media screen and (min-width: 650px) {
 	nav {
 		display: flex;
