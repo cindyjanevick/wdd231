@@ -256,18 +256,18 @@ section {
     width: 100%;
 }
 
-.rounded-box1 {
+.box1 {
     grid-column: 1 / 2;
 }
 
-.rounded-box2 {
+.box2 {
     grid-column: 2 / 3;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
 }
 
-.rounded-box3 {
+.box3 {
     grid-column: 1 / 3;
 }
 

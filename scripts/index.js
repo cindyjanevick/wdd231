@@ -77,7 +77,6 @@ const courses = [
         completed: false
     }
 ]
-
 const doc = document;
 
 createCoursesCard(courses);
@@ -87,109 +86,71 @@ const alllink = doc.querySelector("#all");
 const cselink = doc.querySelector("#cse");
 const wddlink = doc.querySelector("#wdd");
 
-alllink.addEventListener('click', () => {
-    console.clear();
-    // console.log("Clicked All");
-    let allcourses = courses;
-    // console.log(allcourses);
-    createCoursesCard(allcourses);
-    displayCourseWork(allcourses);
-})
+function filterAndDisplayCourses(subject = '') {
+    const filteredCourses = subject ? courses.filter(course => course.subject.includes(subject)) : courses;
+    createCoursesCard(filteredCourses);
+    displayCourseWork(filteredCourses);
+}
 
-cselink.addEventListener('click', () => {
-    console.clear();
-    // console.log("Clicked CSE");
-    let csecourses = courses.filter(courses => courses.subject.includes('CSE'));
-    // console.log(csecourses);
-    createCoursesCard(csecourses);
-    displayCourseWork(csecourses);
-})
-
-wddlink.addEventListener('click', () => {
-    console.clear();
-    // console.log("Clicked WDD");
-    let wddcourses = courses.filter(courses => courses.subject.includes("WDD"));
-    // console.log(wddcourses);
-    createCoursesCard(wddcourses);
-    displayCourseWork(wddcourses);
-})
+alllink.addEventListener('click', () => filterAndDisplayCourses());
+cselink.addEventListener('click', () => filterAndDisplayCourses('CSE'));
+wddlink.addEventListener('click', () => filterAndDisplayCourses('WDD'));
 
 function displayCourseWork(courses) {
+    const courseContainer = doc.querySelector("#course-container");
+    courseContainer.innerHTML = "";
+
     let creditTotal = 0;
-
-    doc.querySelector("#course-container").innerHTML = "";
-
-    let info = doc.createElement("div");
-    info.classList.add("course-container");
 
     courses.forEach(course => {
         creditTotal += course.credits;
 
-        let classtitle = `${course.subject} ${course.number} - ${course.title}`;
-        let classcredits = course.credits;
-        let infoText = doc.createElement("p");
-        infoText.classList.add("courses");
-        infoText.innerHTML = `${classtitle}`;
+        const classtitle = `${course.subject} ${course.number} - ${course.title}`;
+        const classcredits = course.credits;
 
-        let creditText = doc.createElement("p");
-        creditText.innerHTML = `${classcredits} credits`;
+        courseContainer.appendChild(createCourseText(classtitle));
+        courseContainer.appendChild(createCourseText(`${classcredits} credits`));
+    });
 
-        doc.querySelector("#course-container").appendChild(infoText);
-        doc.querySelector("#course-container").appendChild(creditText);
-    })
-
-    let infoText = doc.createElement("p");
-    infoText.classList.add("courses");
-    infoText.innerHTML = `Total Credits`;
-
-    let creditText = doc.createElement("p");
-    creditText.innerHTML = `${creditTotal} credits`;
-
-    doc.querySelector("#course-container").appendChild(infoText);
-    doc.querySelector("#course-container").appendChild(creditText);
+    courseContainer.appendChild(createCourseText('Total Credits'));
+    courseContainer.appendChild(createCourseText(`${creditTotal} credits`));
 }
 
-function createCoursesCard(filteredcourses) {
-   
-    doc.querySelector(".container").innerHTML = "";
+function createCourseText(text) {
+    const p = doc.createElement("p");
+    p.classList.add("courses");
+    p.textContent = text;
+    return p;
+}
 
-    filteredcourses.forEach(course => {
-       
-        let done = course.completed;
-        
-        let card = doc.createElement("div");
+function createCoursesCard(filteredCourses) {
+    const container = doc.querySelector(".container");
+    container.innerHTML = "";
+
+    filteredCourses.forEach(course => {
+        const card = doc.createElement("div");
         card.classList.add("card");
-        
-        let coursename = doc.createElement("p");
-        if (done == true) {
-            coursename.classList.add("done");
-        }
-        else {
-            coursename.classList.add("notdone");
-        }
 
-        let courseNameStr = `${course.subject}${course.number}`
+        const coursename = doc.createElement("p");
+        coursename.classList.add(course.completed ? "done" : "notdone");
+        coursename.textContent = `${course.subject}${course.number}`;
         
-        coursename.innerHTML = courseNameStr;
-
         card.appendChild(coursename);
-        
-        doc.querySelector(".container").appendChild(coursename);
-    })
+        container.appendChild(card);
+    });
 }
 
-
-const hamButton = document.querySelector('#menu');
-const navigation = document.querySelector('.navigation');
+const hamButton = doc.querySelector('#menu');
+const navigation = doc.querySelector('.navigation');
 
 hamButton.addEventListener('click', () => {
-	navigation.classList.toggle('open');
-	hamButton.classList.toggle('open');
+    navigation.classList.toggle('open');
+    hamButton.classList.toggle('open');
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    const currentYearSpan = document.getElementById("currentyear");
-    const lastModifiedSpan = document.getElementById("lastModified");
+    const currentYearSpan = doc.getElementById("currentyear");
+    const lastModifiedSpan = doc.getElementById("lastModified");
 
     const currentYear = new Date().getFullYear();
     currentYearSpan.textContent = currentYear;
