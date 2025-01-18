@@ -25,6 +25,7 @@ header, footer {
     background-color: var(--back_color2); padding: 1rem;
     color: white;
     justify-content: center;
+    
 }
 
 header, body {
@@ -47,8 +48,24 @@ header, body {
 
 header {
     display: flex;
+    /* additions */
+    /* flex-direction: row;
+    align-items: center;
+    
+    background-color: var(--back_color2); 
+    color: white; */
+}
+/* more additions */
+header h1 {
+    font-size: 1.75rem;
+    margin-left: 1rem;
+    font-family: "Neuton", serif; /* Neuton for headings */
 }
 
+header img {
+    height: auto;
+}
+/* end of additions */
 h1 {
     font-size: 1.5rem;
     grid-row: 3 / 4 ;
@@ -70,6 +87,8 @@ h2{
 nav {
     background-color: var(--back_color1);
 }
+
+
 
 ul.menuLinks li a {
     /* border: 1px dashed pink; */
@@ -100,6 +119,19 @@ nav.open {
     grid-template-rows: 1fr;
 }
 
+/* Add the 📌 emoji to the active navigation item */
+ul.menuLinks li a.active::before {
+    content: "📌";
+    margin-right: 0.5rem;  /* Optional: Add space between the emoji and the link text */
+}
+
+/* Optionally, style the active link */
+ul.menuLinks li a.active {
+    color: var(--accent_color1); /* Change color when active */
+    font-weight: bold; /* Optional: Make it bold */
+}
+
+
  /* HEADER - HAMBURGER BUTTON SETTINGS */
  #myButton {
     font-size: 2rem;
@@ -110,6 +142,8 @@ nav.open {
     width: 100%;
     text-align: right;
     padding: .25rem 2vw;
+    /* additions */
+    
 }
 
 /* FOOTER CONTENT */
@@ -117,6 +151,7 @@ nav.open {
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
 }
 
 footer.container {
@@ -124,7 +159,25 @@ footer.container {
     align-items: center;
     margin-top: 1rem;
 }
+/* footer a{
+    place-items: center;
+} */
+/* footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--back_color1);
+    color: white;
+    padding: 1rem;
+}
 
+footer img {
+    margin-bottom: 1rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+} */
 /* BUSINESS CARDS */
 
 section {
@@ -138,12 +191,26 @@ section {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	grid-gap: 0.5rem;
+    /* addition */
+    padding: 1rem;
 }
 
 #cards p {
     font-size: 0.75rem;
 }
+/* addition */
+.card {
+    background-color: var(--accent_color2);
+    padding: 1rem;
+    color: var(--back_color1);
+    text-align: center;
+}
 
+.card img {
+    width: 100%;
+    height: auto;
+}
+/* end of addition */
 section {
     padding: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
