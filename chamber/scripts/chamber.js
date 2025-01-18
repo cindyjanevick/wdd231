@@ -50,9 +50,13 @@ const displayBusinesses = (companies) => {
         h2.setAttribute("class", "buss_name");
         if (company.memberLevel == 3) {
             level.innerHTML = `Gold Level - &#x2605&#x2605&#x2605`;
-        } else if (company.memberLevel == 2) {
+        } 
+            else if (company.memberLevel == 2) {
             level.innerHTML = `Silver Level - &#x2605&#x2605`;           
         }
+            else if (company.memberLevel == 1) {
+            level.innerHTML = `Member - &#x2605`
+            }
         address.innerHTML = `${company.address}`;
         address.setAttribute("class", "addr");
         web.innerHTML = `${company.url}`;
