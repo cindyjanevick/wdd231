@@ -158,6 +158,7 @@ footer.container {
     justify-content: space-between;
     align-items: center;
     margin-top: 1rem;
+    min-height:100px;
 }
 /* footer a{
     place-items: center;
