@@ -16,7 +16,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: "Delius", serif;
+    font-family: "Delius", Verdana, Geneva, Tahoma, sans-serif,serif;
 }
 
 /* COMMON HEADER/FOOTER CONTENT */
@@ -59,7 +59,7 @@ header {
 header h1 {
     font-size: 1.75rem;
     margin-left: 1rem;
-    font-family: "Neuton", serif; /* Neuton for headings */
+    font-family: "Neuton", Verdana, Geneva, Tahoma, sans-serif,serif; /* Neuton for headings */
 }
 
 header img {
