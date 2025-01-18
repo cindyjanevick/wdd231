@@ -208,3 +208,7 @@ section img {
     overflow: hidden;
     word-wrap: break-word;
 }
+
+.main-business {
+    transition: all 0.3s ease-in-out;
+}

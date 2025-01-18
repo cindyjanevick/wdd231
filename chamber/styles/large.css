@@ -35,3 +35,14 @@
     }
 
 }
+
+@media only screen and (max-width: 768px) {
+    header, footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .container {
+        grid-template-columns: 1fr;
+    }
+ }
+ 
