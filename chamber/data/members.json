@@ -1,0 +1,74 @@
+{
+    "companies": [
+        {
+            "name": "Geo Misawa Store",
+            "address": "Sakaemachi, Misawa",
+            "phoneNumber": "0176-50-1080",
+            "url": "https://geo-online.co.jp/store_info/",
+            "imageurl": "images/storelogo.png",
+            "imageurlsrc": "https://geo-online.co.jp/v2/pc/img/header/storeInfoHeaderLogo.png",
+            "memberLevel": 1,
+            "additionalInfo": "Film rental"
+        },
+        {
+            "name": "Coco's Restaurant",
+            "address": "Minamicho, Misawa",
+            "phoneNumber": "0176-50-1522",
+            "url": "https://www.cocos-jpn.co.jp/",
+            "imageurl": "images/cocoweb.png",
+            "imageurlsrc": "https://www.cocos-jpn.co.jp/files/common/cocoweb.png",
+            "memberLevel": 3,
+            "additionalInfo": "Restaurant"
+        },
+        {
+            "name": "Universe Supermarket",
+            "address": "Horiguchi, Misawa",
+            "phoneNumber": "0176-50-1155",
+            "url": "https://www.universe.co.jp/",
+            "imageurl": "images/sitelogo_universe.png",
+            "imageurlsrc": "https://www.universe.co.jp/vc-files/universe/common/sitelogo_universe.png",
+            "memberLevel": 2,
+            "additionalInfo": "Supermarket"
+        },
+        {
+            "name": "Sandoraggu Okamisawaten",
+            "address": "Okamisawa, Misawa",
+            "phoneNumber": "0176-51-3521",
+            "url": "https://sundrug-online.com/",
+            "imageurl": "images/drugstore.png",
+            "imageurlsrc": "https://sundrug-online.com/cdn/shop/files/logo_onlinestore_new_81d70a9a-80b8-4686-9fdc-542114a25339_300x@2x.png?v=1673498412",
+            "memberLevel": 2,
+            "additionalInfo": "Drugstore"
+        },
+        {
+            "name": "Untendaikou transportation",
+            "address": "Chuocho, Misawa",
+            "phoneNumber": "080-1698-3737",
+            "url": "https://untendaikou.co.jp/",
+            "imageurl": "images/logotaxi.png",
+            "imageurlsrc": "https://untendaikou.co.jp/img/logo.svg",
+            "memberLevel": 1,
+            "additionalInfo": "Transportation"
+        },
+        {
+            "name": "Total Salon Graycia",
+            "address": "Chuocho, Misawa",
+            "phoneNumber": "(801) 225-6900",
+            "url": "https://www.squire.com",
+            "imageurl": "images/hd_logo.png",
+            "imageurlsrc": "https://graycia-misawa.jp/system_panel/uploads/images/hd_logo.jpg",
+            "memberLevel": 2,
+            "additionalInfo": "Service Industry"
+        },
+        {
+            "name": "HeroNet",
+            "address": "Chuocho, Misawa",
+            "phoneNumber": "(978) 267-7686",
+            "url": "https://heronet.jp/",
+            "imageurl": "images/herologo.png",
+            "imageurlsrc": "https://heronet.jp/wp-content/uploads/elementor/thumbs/9d79bf93bbde5c65f9f5538e46bf40a5-pk6japrbrzkit44esppap0w81djyhcqr1xv5uk7n54.png",
+            "memberLevel": 3,
+            "additionalInfo": "Internet Provider"
+        }
+    ]
+}
