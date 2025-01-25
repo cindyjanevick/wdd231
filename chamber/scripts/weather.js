@@ -10,7 +10,7 @@ function displayCurrentWeather(data) {
 
     currentDiv.innerHTML = `
         <h2>Current Weather</h2>
-        <img src="${currentWeather.condition.icon}" alt="${currentWeather.condition.text}" width="100" height="100">
+        <img src="https:${currentWeather.condition.icon}" alt="${currentWeather.condition.text}" width="100" height="100">
         <p>Current weather in Misawa, Japan is ${currentWeather.condition.text}</p>
         <p>Temperature: ${currentWeather.temp_f.toFixed(0)}&deg;F</p>
         <p>Feels like: ${currentWeather.feelslike_f.toFixed(0)}&deg;F</p>
@@ -40,7 +40,7 @@ function displayForecast(data) {
 // Helper function to create a forecast card for each day
 function createForecastCard(day) {
     return `<section>
-        <img src="${day.day.condition.icon}" alt="${day.day.condition.text}" width="100" height="100">
+        <img src="https:${day.day.condition.icon}" alt="${day.day.condition.text}" width="100" height="100">
         <div>
             <h4>${day.date}</h4>
             <p class="weather-desc">${day.day.condition.text}</p>
