@@ -29,7 +29,9 @@
     
               
         <script src="scripts/chamber.js" defer></script>
-        <script src="scripts/grid-list.js" defer></script>
+        <!-- <script src="scripts/grid-list.js" defer></script> -->
+        <script src="scripts/spotlight-index.js" defer></script>
+        <script src="scripts/weather.js" defer></script>
             
         
     </head>
@@ -60,18 +62,33 @@
                 <a href="https://cindyjanevick.github.io/wdd231/chamber/join.html">Join the Chamber of Commerce</a>
             </div>
         </div>
-        <div id="grid_list">
-            <button id="select_grid" aria-label="switch to grid view" ><img src="images/grid_icon.png" alt="grid button" loading="lazy" width="30" height="30"></button>
-            <button id="select_list" aria-label="switch to list view"><img src="images/list_icon.png" alt="list button" loading="lazy" width="30" height="30"></button>
 
-            
-        </div>
-        <!-- Main builds up the business cards using either grid or list selection -->
-        <main class="main-business">
-            
-            <!-- Cards are built in chamber.js using members.json -->
-            <div id="cards"></div>
+        <main class="main-large">
+            <section id="home">
+                <div class="events">
+                    <h2>Events</h2>
+                    <p>「商工会は行きます・聞きます・提案します」を合言葉に、
+                        これからも地域の事業者や住民のみなさまがより暮らしやすいまちづくりに努めていきます。</p>
+                </div>
+                <div id="current-weather">
+                    <h2>Current Weather</h2>
+                    <div id="weather1"></div>                
+                </div>
+                <div id="forecast">
+                    <h2>Weather Forecast</h2>
+                    <div id="forecast1"></div>
+                    <div id="forecast2"></div>
+                    <div id="forecast3"></div>
+                </div>
+            </section>
+            <section class="companies">
+                <div id="buss">
+                    <h2>Spotlighting Misawa City Businesses</h2>
+                    <div id="cards"></div>
+                </div>
+            </section>
         </main>
+        
     
         <footer class="container">
             <div>

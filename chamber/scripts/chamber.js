@@ -101,14 +101,25 @@ function createGoldSilverArray(companies) {
     return goldSilver;
 };
 
+function create3RandomBusinesses(array) {
+    // Using Fisher-Yates shuffle algorithm for unique random values
+    let businesses = [];
 
+    for (let i = array.length -1; i>0; i--) {
+        const j = Math.floor(Math.random() * (i+1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+
+    businesses = array.slice(0,3);
+    return businesses;
+}
 
 hamburgerElement.addEventListener('click', () => {
     navElement.classList.toggle('open');
     hamburgerElement.classList.toggle('open');
 });
 
-let spotlight = false;
+// let spotlight = false;
 
 let yr = new Date().getFullYear();
 let lastModified = document.lastModified;

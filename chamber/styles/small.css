@@ -221,7 +221,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-items: center;
+	/* justify-items: center; */
 }
 
 section img {
@@ -280,3 +280,107 @@ section img {
 .main-business {
     transition: all 0.3s ease-in-out;
 }
+
+main {
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#home section {
+    display: flex;
+    background-color: var(--accent_color2);
+}
+
+#buss {
+    padding: 0 1rem;
+    grid-column: 1 / 4;
+    /* background-color: pink; */
+    text-align: center;
+}
+
+.events {
+    padding: 1rem;
+    background-color: var(--back_color4);
+}
+
+#current-weather {
+    padding: 1rem;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--back_color4);
+}
+
+#forecast {
+    padding: 0 1rem;
+    text-transform: capitalize;
+    /* margin: 0 auto; */
+    text-align: center;
+    background-color: var(--back_color4);
+}
+
+/* HERO IMAGE & JOIN BUTTON */
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    bottom: 5%;
+    right: 2%;
+    color: white;
+}
+  
+.hero-text a {
+    border: none;
+    outline: 0;
+    color: black;
+    background-color: var(--accent_color3);
+    text-align: center;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+  
+.hero-text a:hover{
+    background-color: yellow;
+}
+
+.hero-image {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+  
+/* .hero-text {
+    position: absolute;
+    top: 0%;
+    right: 10%;
+    color: white;
+    background-color: var(--back_color2);
+    /* width: 40%;
+    height: 80%;
+} */
+
+.join-action {
+    top: auto;
+    left: auto;
+    height: auto;
+    font-size: 100%;
+    max-width: fit-content;
+}
+  
+.hero-text a {
+    border: 10px;
+    border-color: var(--back_color1);
+    outline: 0;
+    display: inline-block;
+    padding: 5px;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+  
+.hero-text button:hover {
+    background-color: #FFFF00;
+}
+
