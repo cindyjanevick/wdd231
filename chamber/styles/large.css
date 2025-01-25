@@ -34,11 +34,14 @@
     #home {
         display: grid;
         grid-template-columns: 2fr 1fr 2fr;
+        column-gap: 5px;
+        border: 20px solid rgba(0, 0, 0, 0.1);
     }
 
     .events {
         grid-column: 1 / 2;
         height: 100%;
+        /* border: 20px solid rgba(0, 0, 0, 0.1); */
     }
 
     #weather {

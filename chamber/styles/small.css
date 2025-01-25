@@ -181,12 +181,12 @@ footer p {
 } */
 /* BUSINESS CARDS */
 
-section {
+/* section { */
     /* display: grid; */
-    grid-template-columns: 2fr 1fr 1fr;
+    /* grid-template-columns: 2fr 1fr 1fr;
     gap: 5px;
     justify-content: space-around;
-}
+} */
 
 #cards {
 	display: grid;
@@ -214,13 +214,15 @@ section {
 /* end of addition */
 section {
     padding: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    /* border: 1px solid rgba(0, 0, 0, 0.1); */
     background-color: var(--accent_color2);
     color: var(--back_color1);
 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+    gap:5px;
+    
 	/* justify-items: center; */
 }
 
@@ -289,7 +291,7 @@ main {
 
 #home section {
     display: flex;
-    background-color: var(--accent_color2);
+    background-color: var(--accent_color1);
 }
 
 #buss {
@@ -301,14 +303,22 @@ main {
 
 .events {
     padding: 1rem;
-    background-color: var(--back_color4);
+    /* background-color: var(--back_color4); */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px; /* Añadir un poco de espacio interno */
+    background-color:var(--accent_color1);  /* Fondo blanco, o el color que prefieras */
 }
 
 #current-weather {
     padding: 1rem;
     margin: 0 auto;
     text-align: center;
-    background-color: var(--back_color4);
+    /* background-color: var(--back_color4); */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px; /* Añadir un poco de espacio interno */
+    background-color:var(--accent_color1); 
 }
 
 #forecast {
@@ -316,9 +326,19 @@ main {
     text-transform: capitalize;
     /* margin: 0 auto; */
     text-align: center;
-    background-color: var(--back_color4);
+    /* background-color: var(--back_color4); */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px; /* Añadir un poco de espacio interno */
+    background-color:var(--accent_color1); 
 }
 
+.events h2, #current-weather h2, #forecast h2 {
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 10px; /* Espacio alrededor del texto si lo deseas */
+    background-color: var(--accent_color2); /* Fondo opcional */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
 /* HERO IMAGE & JOIN BUTTON */
 
 .hero-text {
