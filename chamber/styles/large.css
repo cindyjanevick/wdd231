@@ -35,7 +35,7 @@
         display: grid;
         grid-template-columns: 2fr 1fr 2fr;
         column-gap: 5px;
-        border: 20px solid rgba(0, 0, 0, 0.1);
+        /* border: 20px solid rgba(0, 0, 0, 0.1); */
     }
 
     .events {

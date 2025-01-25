@@ -199,6 +199,20 @@ footer p {
 #cards p {
     font-size: 0.75rem;
 }
+
+#cards section {
+    border-radius: 10px; /* Rounded corners for the cards */
+    background-color: var(--accent_color2); /* Optional for styling */
+    padding: 1rem; /* Internal padding for the cards */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.51); /* Add a subtle shadow */
+}
+
+#buss >h2 {
+    border-radius: 10px;
+    background-color: var(--back_color1); /* Retain this or adjust as needed */
+    color: white; /* Optional: Ensure contrast with background */
+    padding: 0.5rem; /* Optional: Add some padding */
+}
 /* addition */
 .card {
     background-color: var(--accent_color2);
@@ -216,7 +230,7 @@ section {
     padding: 1rem;
     /* border: 1px solid rgba(0, 0, 0, 0.1); */
     background-color: var(--accent_color2);
-    color: var(--back_color1);
+    /* color: var(--back_color1); */
 
 	display: flex;
 	flex-direction: column;
@@ -225,6 +239,10 @@ section {
     
 	/* justify-items: center; */
 }
+/* #buss h2{
+    border-radius: 10px;
+    background-color: #1B4332;
+} */
 
 section img {
     width: 140px;
@@ -330,7 +348,8 @@ main {
     border-radius: 15px; /* Bordes redondeados */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
     padding: 20px; /* Añadir un poco de espacio interno */
-    background-color:var(--accent_color1); 
+    background-color:var(--accent_color1);
+    color:black; 
 }
 
 .events h2, #current-weather h2, #forecast h2 {
@@ -338,6 +357,7 @@ main {
     padding: 10px; /* Espacio alrededor del texto si lo deseas */
     background-color: var(--accent_color2); /* Fondo opcional */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 10px;
 }
 /* HERO IMAGE & JOIN BUTTON */
 
