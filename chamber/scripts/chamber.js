@@ -59,7 +59,7 @@ const displayBusinesses = (companies) => {
             }
         address.innerHTML = `${company.address}`;
         address.setAttribute("class", "addr");
-        web.innerHTML = `${company.url}`;
+        web.innerHTML = `<a href="${company.url}" target="_blank" rel="noopener noreferrer">${company.url}</a>`;
         web.setAttribute("class", "web_url");
         phone.innerHTML = `${company.phoneNumber}`;
         phone.setAttribute("class", "phone");
