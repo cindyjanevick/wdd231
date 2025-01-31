@@ -202,7 +202,7 @@ footer p {
 
 #cards section {
     border-radius: 10px; /* Rounded corners for the cards */
-    background-color: var(--back_color3); /* Optional for styling */
+    /* background-color: var(--back_color3); Optional for styling */
     padding: 1rem; /* Internal padding for the cards */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.51); /* Add a subtle shadow */
 }
@@ -264,7 +264,7 @@ section img {
 }
 
 .list section:nth-child(even) {
-    background-color: #7FC6DE;
+    background-color:var(--accent_color3);
 }
 
 .list .buss_name {
