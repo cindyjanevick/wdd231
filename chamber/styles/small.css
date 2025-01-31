@@ -77,7 +77,7 @@ button {
 
 #myButton::before {
     content: "≡";
-    background-color: var(--back_color2);
+    background-color: var(--back_color1);
 }
 
 h2{
@@ -139,7 +139,7 @@ ul.menuLinks li a.active {
     border: none;
     color: #fff;
     cursor: pointer;
-    width: 100%;
+    /* width: 100%; */
     text-align: right;
     padding: .25rem 2vw;
     /* additions */
