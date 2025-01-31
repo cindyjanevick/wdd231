@@ -29,9 +29,10 @@
     
               
         <script src="scripts/chamber.js" defer></script>
-        <script src="scripts/footer.js" defer></script>
-        <script src="scripts/grid-list.js" defer></script>
-        <script src="scripts/spotlight-directory.js" defer></script>
+        <!-- <script src="scripts/grid-list.js" defer></script> -->
+        <script src="scripts/spotlight-index.js" defer></script>
+        <script src="scripts/weather.js" defer></script>
+        <script src="scripts/form.js" defer></script>
             
         
     </head>
@@ -49,25 +50,20 @@
         <nav id="animateme">
            
             <ul class="menuLinks">
-                <li><a href="index.html" title="Home">Home</a></li>
-                <li><a href="directory.html" title="Businesses" class="active">Directory</a></li>
-                <li><a href="join.html" title="Join the Chamber of Commerce">Join</a></li>
-                <li><a href="discover.html" title="Discover">Discover</a></li>
+                <li><a href="index.html" title="Home" >Home</a></li>
+                <li><a href="directory.html" title="Businesses" >Directory</a></li>
+                <li><a href="join.html" title="Join the Chamber of Commerce" class="active">Join</a></li>
+                <li><a href="#" title="Discover">Discover</a></li>
                                 
             </ul>
         </nav>
-    
-        <div id="grid_list">
-            <button id="select_grid" aria-label="switch to grid view" ><img src="images/grid_icon.png" alt="grid button" loading="lazy" width="30" height="30"></button>
-            <button id="select_list" aria-label="switch to list view"><img src="images/list_icon.png" alt="list button" loading="lazy" width="30" height="30"></button>
-
-            
-        </div>
-        <!-- Main builds up the business cards using either grid or list selection -->
-        <main class="main-business">
-            
-            <!-- Cards are built in chamber.js using members.json -->
-            <div id="cards"></div>
+        
+        <main>
+            <section>
+            <p>We appreciate your interest in the Misawa Chamber of Commerce. Thank you!</p>
+            <div id="form-data"></div>
+            <a href="index.html" class="button">Return to Home</a>
+        </section>
         </main>
     
         <footer class="container">

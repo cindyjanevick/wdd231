@@ -138,3 +138,8 @@
         min-height: 200px;
  }
 }
+
+#joingrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

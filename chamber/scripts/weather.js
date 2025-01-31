@@ -19,35 +19,29 @@ function displayCurrentWeather(data) {
     `;
 }
 
-// Function to display 3-day forecast
+// Function to display concise 3-day forecast with boxes
 function displayForecast(data) {
-    console.log("displayForecast function called");
+    const forecastDiv = document.querySelector('#forecast');
 
-    // Select forecast-id HTML elements in the document
-    let day1Div = document.querySelector('#forecast1');
-    let day2Div = document.querySelector('#forecast2');
-    let day3Div = document.querySelector('#forecast3');
-
-    // Directly use WeatherAPI's forecastday data
+    // Extract forecast data from the API response
     const forecastDays = data.forecast.forecastday;
 
-    // Assign the forecast for each day
-    day1Div.innerHTML = createForecastCard(forecastDays[0]);
-    day2Div.innerHTML = createForecastCard(forecastDays[1]);
-    day3Div.innerHTML = createForecastCard(forecastDays[2]);
-}
+    // Build the forecast summary with boxes for each day
+    let forecastSummary = "<h2>Weather Forecast</h2>";
+    forecastDays.forEach((day, index) => {
+        const dayName = index === 0 ? "Today" : new Date(day.date).toLocaleDateString("en-US", { weekday: "long" });
+        forecastSummary += `
+            <div class="forecast-box">
+                <img src="https:${day.day.condition.icon}" alt="${day.day.condition.text}" width="80" height="80">
+                <p class="forecast-day">${dayName}</p>
+                <p class="forecast-temp">${day.day.maxtemp_f.toFixed(0)}°F</p>
+                <p class="forecast-desc">${day.day.condition.text}</p>
+            </div>
+        `;
+    });
 
-// Helper function to create a forecast card for each day
-function createForecastCard(day) {
-    return `<section>
-        <img src="https:${day.day.condition.icon}" alt="${day.day.condition.text}" width="100" height="100">
-        <div>
-            <h4>${day.date}</h4>
-            <p class="weather-desc">${day.day.condition.text}</p>
-            <p>High: ${day.day.maxtemp_f.toFixed(0)}&deg;F</p>
-            <p>Low: ${day.day.mintemp_f.toFixed(0)}&deg;F</p>
-        </div>
-    </section>`;
+    // Inject the forecast summary into the HTML
+    forecastDiv.innerHTML = forecastSummary;
 }
 
 // Function to fetch weather data from the API using latitude and longitude

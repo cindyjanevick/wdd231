@@ -77,17 +77,21 @@ const courses = [
         completed: false
     }
 ]
+
 const doc = document;
+const courseDetails = doc.querySelector('#courseDetails'); // Ensure the dialog element is selected
 
 createCoursesCard(courses);
 displayCourseWork(courses);
 
-const alllink = doc.querySelector("#all");
-const cselink = doc.querySelector("#cse");
-const wddlink = doc.querySelector("#wdd");
+const alllink = doc.querySelector('#all');
+const cselink = doc.querySelector('#cse');
+const wddlink = doc.querySelector('#wdd');
 
 function filterAndDisplayCourses(subject = '') {
-    const filteredCourses = subject ? courses.filter(course => course.subject.includes(subject)) : courses;
+    const filteredCourses = subject
+        ? courses.filter(course => course.subject.includes(subject))
+        : courses;
     createCoursesCard(filteredCourses);
     displayCourseWork(filteredCourses);
 }
@@ -97,8 +101,8 @@ cselink.addEventListener('click', () => filterAndDisplayCourses('CSE'));
 wddlink.addEventListener('click', () => filterAndDisplayCourses('WDD'));
 
 function displayCourseWork(courses) {
-    const courseContainer = doc.querySelector("#course-container");
-    courseContainer.innerHTML = "";
+    const courseContainer = doc.querySelector('#course-container');
+    courseContainer.innerHTML = '';
 
     let creditTotal = 0;
 
@@ -117,48 +121,63 @@ function displayCourseWork(courses) {
 }
 
 function createCourseText(text) {
-    const p = doc.createElement("p");
-    p.classList.add("courses");
+    const p = doc.createElement('p');
+    p.classList.add('courses');
     p.textContent = text;
     return p;
 }
 
 function createCoursesCard(filteredCourses) {
-    const container = doc.querySelector(".container");
-    container.innerHTML = "";
+    const container = doc.querySelector('.container');
+    container.innerHTML = '';
 
     filteredCourses.forEach(course => {
-        const card = doc.createElement("div");
-        card.classList.add("card");
+        const card = doc.createElement('div');
+        card.classList.add('card');
 
-        const coursename = doc.createElement("p");
-        coursename.classList.add(course.completed ? "done" : "notdone");
+        const coursename = doc.createElement('p');
+        coursename.classList.add(course.completed ? 'done' : 'notdone');
         coursename.textContent = `${course.subject}${course.number}`;
-        
+
         card.appendChild(coursename);
 
+        // Add click event to show course details
         card.addEventListener('click', () => {
             displayCourseDetails(course);
         });
+
         container.appendChild(card);
     });
 }
-function displayCourseDetails(course){
-    courseDetails.innerHTML= '';
-    courseDetails.innerHTML= `
-    <button id="closeModal">❎</button>
-    <h2>${course.subject} ${course.number}</h2>
-    <h3>${course.title}</h3>
-    <p><strong>Credits</strong>: ${course.credits}</p>
-    <p><strong>Certificate</strong>: ${course.certificate}</p>
-    <p>${course.description}</p>
-    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p> `;
+
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+        <button id="closeModal">❌</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+
     courseDetails.showModal();
 
-    closeModal.addEventListener("click", () => {
+    const closeModal = doc.querySelector('#closeModal');
+    closeModal.addEventListener('click', () => {
         courseDetails.close();
-    })
+    });
+
+    // Optional: Close the modal when clicking outside of it
+    courseDetails.addEventListener('click', (event) => {
+        if (event.target === courseDetails) {
+            courseDetails.close();
+        }
+    });
 }
+
+// Hamburger menu toggle
 const hamButton = doc.querySelector('#menu');
 const navigation = doc.querySelector('.navigation');
 
@@ -167,12 +186,12 @@ hamButton.addEventListener('click', () => {
     hamButton.classList.toggle('open');
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const currentYearSpan = doc.getElementById("currentyear");
-    const lastModifiedSpan = doc.getElementById("lastModified");
+document.addEventListener('DOMContentLoaded', function () {
+    const currentYearSpan = doc.getElementById('currentyear');
+    const lastModifiedSpan = doc.getElementById('lastModified');
 
     const currentYear = new Date().getFullYear();
     currentYearSpan.textContent = currentYear;
 
-    lastModifiedSpan.textContent = "Last Modification: " + document.lastModified;
+    lastModifiedSpan.textContent = 'Last Modification: ' + document.lastModified;
 });

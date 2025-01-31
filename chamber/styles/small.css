@@ -424,3 +424,115 @@ main {
     background-color: #FFFF00;
 }
 
+/* JOIN Page */
+
+#joingrid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+/* #memberlevels {
+    background-color: yellow;
+} */
+
+.np {
+    border: 5px solid var(--back_color2);
+    padding: 1vw;
+    margin: 1px;
+    animation-name: np;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes np {
+    from {border-color: var(--back_color2);}
+    to {border-color: #fff;}
+}
+
+.bronze {
+    border: 5px solid var(--back_color2);
+    padding: 1vw;
+    margin: 1px;
+    animation-name: bronze;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bronze {
+    from {border-color: var(--back_color2);}
+    to {border-color: burlywood;}
+}
+
+.silver {
+    border: 5px solid var(--back_color2);
+    padding: 1vw;
+    margin: 1px;
+    animation-name: silver;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes silver {
+    from {border-color: var(--back_color2);}
+    to {border-color: silver;}
+}
+
+.gold {
+    border: 5px solid var(--back_color2);
+    padding: 1vw;
+    margin: 1px;
+    animation-name: gold;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes gold {
+    from {border-color: var(--back_color2);}
+    to {border-color: gold;}
+}
+
+#openButton {background-color: aqua;}
+
+#dialogBox {
+    background-color: var(--accent_color3);
+    text-align: center;
+}
+
+#closeButton {
+    background-color: var(--back_color1);
+    color: var(--accent_color3);
+}
+
+::backdrop {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.join-action {
+    top: auto;
+    left: auto;
+    height: auto;
+    font-size: 100%;
+    max-width: fit-content;
+}
+.hero-text a {
+    border: 10px;
+    border-color: var(--back_color1);
+    outline: 0;
+    display: inline-block;
+    padding: 5px;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+  
+.hero-text button:hover {
+    background-color: #FFFF00;
+} 
+
+#form p{
+    color:#CC0000;
+}
