@@ -135,7 +135,7 @@ ul.menuLinks li a.active {
  /* HEADER - HAMBURGER BUTTON SETTINGS */
  #myButton {
     font-size: 2rem;
-    background-color: var(--back_color2);
+    background-color: var(--back_color1);
     border: none;
     color: #fff;
     cursor: pointer;
