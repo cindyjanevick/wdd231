@@ -315,7 +315,7 @@ main {
 #buss {
     padding: 0 1rem;
     grid-column: 1 / 4;
-    /* background-color: pink; */
+    background-color: var(--accent_color1);
     text-align: center;
 }
 
