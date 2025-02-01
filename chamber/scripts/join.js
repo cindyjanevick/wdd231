@@ -37,16 +37,33 @@ async function fetchData() {
 
 // Display modal with membership info
 function showModal(levelData) {
+    // Clear existing color classes
     modal.classList.remove("bronze", "silver", "gold", "np");
+    
+    // Add class based on membership level
     modal.classList.add(levelData.level);
 
+    // Update modal content
     modalTitle.textContent = levelData.name;
     modalDescription.innerHTML = `
         <p><strong>Cost:</strong> ${levelData.cost}</p>
         <p><strong>Benefits:</strong> ${levelData.benefits}</p>
     `;
-    modal.showModal();
+
+    // Display modal if supported
+    if (modal.showModal) {
+        modal.showModal();
+    } else {
+        // Fallback for browsers without <dialog> support
+        modal.style.display = "block";
+    }
 }
 
 // Close modal
-closeModal.addEventListener("click", () => modal.close());
+closeModal.addEventListener("click", () => {
+    if (modal.close) {
+        modal.close();
+    } else {
+        modal.style.display = "none";
+    }
+});
