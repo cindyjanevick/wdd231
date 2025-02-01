@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <meta name="description" content="WDD231 W02 Chamber Directory Page">
+        <meta name="author" content="Cindy Jane Vick">
+        <title>WDD231 Directory Page - Cindy Jane Vick</title>
+
+        <!-- social media meta tags -->
+        <meta property="og:title" content="WDD231 Chamber Directory Page">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="WDD231 Chamber Directory Page developed by Cindy Vick.">
+        <meta property="og:image" content="https://cindyjanevick.github.io/wdd231/chamber/images/misawa_shi.webp">
+        <meta property="og:url" content="https://cindyjanevick.github.io/wdd231/chamber/directory.html#">
+    
+        <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/small.css">
+        <link rel="stylesheet" href="styles/large.css">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Delius&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+        
+        <script src="scripts/chamber.js" defer></script>
+        <script src="scripts/spotlight-index.js" defer></script>
+        <script src="scripts/weather.js" defer></script>
+        <script src="scripts/form.js" defer></script>
+        <script src="scripts/thankyou.js" defere></script>
+        
+    </head>
+    <body>
+        <header class="container">
+            <div>
+                <img src="images/logo.png" alt="Misawa Chamber Logo" loading="lazy" width="100" height="24">
+            </div>
+            <div class="pad">
+                <h1>Misawa City - Chamber of Commerce</h1>            
+            </div>
+            <button id="myButton" aria-label="Misawa Chamber Logo"></button>
+        </header>
+        
+        <nav id="animateme">
+            <ul class="menuLinks">
+                <li><a href="index.html" title="Home">Home</a></li>
+                <li><a href="directory.html" title="Businesses">Directory</a></li>
+                <li><a href="join.html" title="Join the Chamber of Commerce" class="active">Join</a></li>
+                <li><a href="discover.html" title="Discover">Discover</a></li>
+            </ul>
+        </nav>
+        
+        <main class="main-large">
+
+            <!-- <div id="joingrid"> -->
+            <div id="joingrid">
+                <section id="form">
+                    <h2>Join The Chamber of Commerce</h2>
+                    <p><span class="required">*</span> Indicates a required field.</p>
+    
+                    <form method="get" action="thanks.html">
+                        <fieldset>
+                            <legend>Membership Application Form</legend>
+                            <div class="form-item firstname">
+                                <span class="required">*</span>
+                                <label for="firstname">First Name:</label><p>
+                                <input type="text" id="firstname" name="firstname" 
+                                autocomplete="given-name" required><br>
+                            </p></div>
+                            <div class="form-item lastname">
+                                <span class="required">*</span>
+                                <label for="lastname">Last Name:</label><p>
+                                <input type="text" id="lastname" name="lastname" 
+                                autocomplete="family-name" required><br>
+                            </p></div>                    
+                            <div class="form-item orgtitle">
+                                <label for="orgtitle">Title:</label><p>
+                                <input type="text" id="orgtitle" name="orgtitle" pattern="[a-zA-Z0-9\-\s]{7,}"
+                                autocomplete="organization-title"><br>
+                            </p></div>
+                            <div class="form-item email">
+                                <span class="required">*</span>
+                                <label for="email">email Address:</label><p>
+                                <input type="email" id="email" name="email" placeholder="name@gmail.com"
+                                autocomplete="email" required><br>
+                            </p></div>                    
+                            <div class="form-item mobile">
+                                <span class="required">*</span>
+                                <label for="mobile">Mobile Phone Number:</label><p>
+                                <input type="tel" id="mobile" name="mobile" placeholder="123-456-6789" pattern="[0-9]{3}[-]*[0-9]{3}[-]*[0-9]{4}"
+                                autocomplete="tel" required><br>
+                            </p></div>
+                            <div class="form-item orgname">
+                                <span class="required">*</span>
+                                <label for="orgname">Business/Organization's Name:</label><p>
+                                <input type="text" id="orgname" name="orgname" 
+                                autocomplete="organization" required><br>
+                            </p></div>
+    
+                            <div class="form-item column1">
+                                <label for="level">Membership Level:</label><p>
+                                <select class="option" name="level" id="level">
+                                <option value="nonp">NP Membership</option>
+                                <option value="bronze">Bronze Membership</option>
+                                <option value="silver">Silver Membership</option>
+                                <option value="gold">Gold Membership</option>
+                                </select>
+                            </p></div>
+    
+                            <label class="desc" for="feedback">Business Description:</label><p>
+                                <textarea id="feedback" name="feedback" rows="4" placeholder="Your business description here"></textarea>
+                                
+                            <input type="hidden" name="timestamp" id="timestamp">
+                        </fieldset>
+            
+                        <div>
+                            <input type="submit" value="Submit Chamber of Commerce Application">
+                        </div>
+            
+                    </form>
+                </section>
+                <div>
+                <section id="memberlevels">
+                    <h2>Membership Levels</h2>
+                    <!-- <button id="openButton">More Info</button> -->
+                    <dialog id="dialogBox">
+                        <h4>Sample Level</h4>
+                        <p>Sample String</p>
+                        <button id="closeButton">Close</button>
+                    </dialog>
+                </section>
+            </div>
+            </div>
+        </main>
+
+        <footer class="container">
+            <div>
+                <img src="images/logo.png" alt="Misawa Chamber Logo" loading="lazy" width="100" height="24">
+                <p>Misawa</p>
+                <p>2-1-1 Sawai-Cho, Misawa-shi</p>
+                <p>Aomori-Ken, 033-0011</p>
+                <p>0176-53-2175</p>
+                <p>http://www.misawa.or.jp/</p>
+            </div>
+            <div>
+                <a href="https://www.facebook.com/misawa.or.jp/" target="_blank">
+                    <img src="images/facebook_logo.png" alt="Facebook" width="50" height="50">
+                </a>
+                <a href="https://twitter.com/misawa.or.jp/" target="_blank">
+                    <img src="images/twitter_logo.png" alt="Twitter" width="40" height="40">
+                </a>
+                <a href="https://www.instagram.com/misawa.or.jp/" target="_blank">
+                    <img src="images/instagram_logo.png" alt="Instagram" width="50" height="50">
+                </a>
+            </div>
+
+            <div>
+                <p>WDD 231 Class Project</p>
+                <p>Cindy Jane Vick</p>
+                <p id="copywrite"></p>
+                <p id="lastModified"></p>
+            </div>
+        </footer>
+    </body>
+</html>

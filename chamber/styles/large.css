@@ -143,3 +143,20 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+
+
+
+@media (max-width: 768px) {
+    .cards-container {
+        grid-column: 1;
+        /* display: grid */
+        flex-direction: column;
+        gap: 1rem;    
+        align-items: center;
+        display: flex;
+    }
+   
+    /* .cards-container {
+            align-items: flex-start; /* Forces tighter spacing on large screens */
+        }

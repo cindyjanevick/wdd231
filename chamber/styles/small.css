@@ -424,115 +424,245 @@ main {
     background-color: #FFFF00;
 }
 
-/* JOIN Page */
-
-#joingrid {
+/* join page */
+/* Form and card layout */
+.form-grid-layout {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-
-/* #memberlevels {
-    background-color: yellow;
-} */
-
-.np {
-    border: 5px solid var(--back_color2);
-    padding: 1vw;
-    margin: 1px;
-    animation-name: np;
-    animation-duration: 1s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
+/* Form styling remains the same */
+form {
+    grid-column: 1 / 2;
+    margin: 1rem 2%;
 }
 
-@keyframes np {
-    from {border-color: var(--back_color2);}
-    to {border-color: #fff;}
+/* Membership cards styling */
+.cards-container {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    align-items: center;
 }
 
-.bronze {
-    border: 5px solid var(--back_color2);
-    padding: 1vw;
-    margin: 1px;
-    animation-name: bronze;
-    animation-duration: 1s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes bronze {
-    from {border-color: var(--back_color2);}
-    to {border-color: burlywood;}
-}
-
-.silver {
-    border: 5px solid var(--back_color2);
-    padding: 1vw;
-    margin: 1px;
-    animation-name: silver;
-    animation-duration: 1s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes silver {
-    from {border-color: var(--back_color2);}
-    to {border-color: silver;}
-}
-
-.gold {
-    border: 5px solid var(--back_color2);
-    padding: 1vw;
-    margin: 1px;
-    animation-name: gold;
-    animation-duration: 1s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes gold {
-    from {border-color: var(--back_color2);}
-    to {border-color: gold;}
-}
-
-#openButton {background-color: aqua;}
-
-#dialogBox {
-    background-color: var(--accent_color3);
-    text-align: center;
-}
-
-#closeButton {
-    background-color: var(--back_color1);
-    color: var(--accent_color3);
-}
-
-::backdrop {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-.join-action {
-    top: auto;
-    left: auto;
-    height: auto;
-    font-size: 100%;
-    max-width: fit-content;
-}
-.hero-text a {
-    border: 10px;
-    border-color: var(--back_color1);
-    outline: 0;
-    display: inline-block;
-    padding: 5px;
-    color: black;
+/* Card styling */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    width: 100%
 }
-  
-.hero-text button:hover {
-    background-color: #FFFF00;
-} 
 
-#form p{
-    color:#CC0000;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
+/* Existing form on join page label styles */
+form label {
+    display: block;
+    font-size: .8rem;
+    color: var(--primary-color);
+    padding-top: .2rem;
+    margin-bottom: 0.5rem;
+}
+
+form h3 {
+    font-size: .9rem;
+    color: var(--neutral-color2);
+    margin: 1.5rem 0 .2rem 0;
+    border-bottom: 1px solid var(--neutral-color1);
+}
+
+input[type=text],
+input[type=tel],
+input[type=date],
+input[type=email],
+textarea,
+select {
+    display: block;
+    margin: 0.1rem 0 1rem 0;
+    padding: 0.5rem;
+    border: 1px solid #000;
+    border-radius: 4px;
+    border-left-width: 5px;
+    border-left-color: var(--accent-color1);
+    font-size: 1rem;
+    color: var(--neutral-color2);
+    width: 90%;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    border-color: black;
+    border-left-color: var(--secondary-color);
+    outline: none;
+}
+
+input:required:valid {
+    border-left-color: var(--secondary-color);
+}
+
+input[type=submit] {
+    border: none;
+    text-align: center;
+    background-color: var(--accent_color4);
+    color: white;
+    border-radius: 1rem;
+    padding: 0.75rem 1.5rem;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Autofill color */
+input:-webkit-autofill {
+    -webkit-text-fill-color: var(--neutral-color2);
+}
+
+/* Results section */
+#results {
+    background-color: var(--neutral-color1);
+    padding: 0 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 6px;
+}
+
+/* Radio button styling */
+input[type="radio"] {
+    accent-color: var(--secondary-color);
+}
+
+/* Label styling */
+label {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+/* Initial Animation */
+.cards-container .card {
+    width: 90%;
+    height: 75%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+   
+}
+
+/* Hover effect */
+/* .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+} */
+
+/* Animation */
+@keyframes flashWhite {
+    0%, 100% { background-color: white; color: black; }
+    50% { background-color: var(--back_color2); color: white; }
+}
+
+@keyframes flashBronze {
+    0%, 100% { background-color: white; color: black; }
+    50% { background-color: #694016; color: var(--accent_color3); }
+}
+
+@keyframes flashSilver {
+    0%, 100% { background-color: white; color: black; }
+    50% { background-color: #c0c0c0; color: black; }
+}
+
+@keyframes flashGold {
+    0%, 100% { background-color: white; color: black; }
+    50% { background-color: #ffd900cb; color: black; }
+}
+
+/* Apply animations based on data-membership */
+.card[data-membership="np"] {
+    animation: flashWhite 2.5s infinite alternate;
+}
+
+.card[data-membership="bronze"] {
+    animation: flashBronze 2.5s infinite alternate;
+}
+
+.card[data-membership="silver"] {
+    animation: flashSilver 1.5s infinite alternate;
+}
+
+.card[data-membership="gold"] {
+    animation: flashGold 1.5s infinite alternate;
+}
+/*Styling for thank you page*/
+/* Results Section Styling */
+#results {
+    background-color: var(--neutral-color1, #f5f5f5);
+    padding: 1rem;
+    border: 1px solid var(--primary-color, #7A2E1C);
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 2rem auto;
+    font-family: var(--body-font, sans-serif);
+}
+
+#results h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color, #7A2E1C);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#results p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--neutral-color2, #4F3D27);
+}
+
+.form-layout{
+    background-color: var(--back_color3);
+}
+
+
+    /* Form styling remains the same */
+form {
+    grid-column: 1;
+    margin: 1rem 2%;
+}
+
+    .form-grid-layout {
+        grid-template-columns: 1fr;    /* Single-column layout */
+        gap: 1rem;                     /* Adjust spacing */
+    }
+
+    .cards-container {
+        display: flex;
+        flex-direction: column;        /* Stack cards vertically */
+        align-items: center;
+        gap: 1rem;                     /* Space between cards */
+    }
+
+    .card {
+        width: 90%;                    /* Make cards fit the screen */
+        max-width: 300px;
+    }

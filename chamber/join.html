@@ -26,10 +26,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Delius&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
         
         <script src="scripts/chamber.js" defer></script>
-        <script src="scripts/spotlight-index.js" defer></script>
-        <script src="scripts/weather.js" defer></script>
+        <!-- <script src="scripts/spotlight-index.js" defer></script> -->
+        <!-- <script src="scripts/weather.js" defer></script> -->
         <script src="scripts/form.js" defer></script>
-        <script src="scripts/thankyou.js" defere></script>
+        <script src="scripts/thankyou.js" defer></script>
+        <script src="scripts/join.js" defer></script>
         
     </head>
     <body>
@@ -52,86 +53,79 @@
             </ul>
         </nav>
         
-        <main class="main-large">
-
-            <!-- <div id="joingrid"> -->
-            <div id="joingrid">
-                <section id="form">
-                    <h2>Join The Chamber of Commerce</h2>
-                    <p><span class="required">*</span> Indicates a required field.</p>
+        <main>
+            <div class="form-grid-layout">
+                <!-- Form on the left side -->
+                <div class="form-layout">
+                    <h1>Join Misawa Chamber of Commerce</h1>
+                    <p>* Indicates a required field </p>
+                    <form method="GET" action="thankyou.html" class="designOne">
+                        <label>First Name <input type="text" name="first" required autocomplete="given-name"
+                                title="Your First Name"></label>
+                        <label>Last Name <input type="text" name="last" required autocomplete="family-name"
+                                title="Your Last Name"></label>
+                        <label>Organizational Title
+                            <input type="text" name="title" required autocomplete="organization-title"
+                                pattern="^[A-Za-z\s\-]{7,}$"
+                                title="Please enter a title with at least 7 characters using only letters, hyphens, and spaces">
+                        </label>
+                        <label>Cell Phone <input type="tel" name="phone" autocomplete="tel"
+                                title="A Phone Number with dashes" placeholder="987-555-1234"></label>
+                        <label>Email <input type="email" name="email" required placeholder="example@gmail.com"
+                                title="Your Email" autocomplete="email"></label>
+                        <label>Business/Organization Name <input type="text" name="org" required autocomplete="organization"
+                                title="Your Organizational/Business Title"></label>
     
-                    <form method="get" action="thanks.html">
-                        <fieldset>
-                            <legend>Membership Application Form</legend>
-                            <div class="form-item firstname">
-                                <span class="required">*</span>
-                                <label for="firstname">First Name:</label><p>
-                                <input type="text" id="firstname" name="firstname" 
-                                autocomplete="given-name" required><br>
-                            </p></div>
-                            <div class="form-item lastname">
-                                <span class="required">*</span>
-                                <label for="lastname">Last Name:</label><p>
-                                <input type="text" id="lastname" name="lastname" 
-                                autocomplete="family-name" required><br>
-                            </p></div>                    
-                            <div class="form-item orgtitle">
-                                <label for="orgtitle">Title:</label><p>
-                                <input type="text" id="orgtitle" name="orgtitle" pattern="[a-zA-Z0-9\-\s]{7,}"
-                                autocomplete="organization-title"><br>
-                            </p></div>
-                            <div class="form-item email">
-                                <span class="required">*</span>
-                                <label for="email">email Address:</label><p>
-                                <input type="email" id="email" name="email" placeholder="name@gmail.com"
-                                autocomplete="email" required><br>
-                            </p></div>                    
-                            <div class="form-item mobile">
-                                <span class="required">*</span>
-                                <label for="mobile">Mobile Phone Number:</label><p>
-                                <input type="tel" id="mobile" name="mobile" placeholder="123-456-6789" pattern="[0-9]{3}[-]*[0-9]{3}[-]*[0-9]{4}"
-                                autocomplete="tel" required><br>
-                            </p></div>
-                            <div class="form-item orgname">
-                                <span class="required">*</span>
-                                <label for="orgname">Business/Organization's Name:</label><p>
-                                <input type="text" id="orgname" name="orgname" 
-                                autocomplete="organization" required><br>
-                            </p></div>
+                        <h3>Membership Level</h3>
+                        <label><input type="radio" name="membership" value="NP" checked> NP Membership</label>
+                        <label><input type="radio" name="membership" value="Bronze"> Bronze Membership</label>
+                        <label><input type="radio" name="membership" value="Silver"> Silver Membership</label>
+                        <label><input type="radio" name="membership" value="Gold"> Gold Membership</label>
     
-                            <div class="form-item column1">
-                                <label for="level">Membership Level:</label><p>
-                                <select class="option" name="level" id="level">
-                                <option value="nonp">NP Membership</option>
-                                <option value="bronze">Bronze Membership</option>
-                                <option value="silver">Silver Membership</option>
-                                <option value="gold">Gold Membership</option>
-                                </select>
-                            </p></div>
+                        <label>Business/Organization Description</label>
+                        <textarea id="description" name="description" rows="4" required placeholder="Description"
+                            title="Describe your business or organization, including its purpose and services"></textarea>
     
-                            <label class="desc" for="feedback">Business Description:</label><p>
-                                <textarea id="feedback" name="feedback" rows="4" placeholder="Your business description here"></textarea>
-                                
-                            <input type="hidden" name="timestamp" id="timestamp">
-                        </fieldset>
-            
-                        <div>
-                            <input type="submit" value="Submit Chamber of Commerce Application">
-                        </div>
-            
+                        <input type="hidden" id="timestamp" name="timestamp">
+    
+                        <input type="submit" value="Submit Application">
                     </form>
-                </section>
+                </div>
     
-                <section id="memberlevels">
-                    <h2>Membership Levels</h2>
-                    <!-- <button id="openButton">More Info</button> -->
-                    <dialog id="dialogBox">
-                        <h4>Sample Level</h4>
-                        <p>Sample String</p>
-                        <button id="closeButton">Close</button>
-                    </dialog>
-                </section>
+                <!-- Membership cards on the right side -->
+                
+                <div class="cards-container">
+                    <div class="card" data-membership="np">
+                        <h3>NP Membership</h3>
+                        <p>No cost for Non Profit Organizations</p>
+                        <p>Click for more details</p>
+                    </div>
+                    <div class="card" data-membership="bronze">
+                        <h3>Bronze Membership</h3>
+                        <p>Cost: $100/Year</p>
+                        <p>Click for more details</p>
+    
+                    </div>
+                    <div class="card" data-membership="silver">
+                        <h3>Silver Membership</h3>
+                        <p>Cost: $200/Year</p>
+                        <p>Click for more details</p>
+                    </div>
+                    <div class="card" data-membership="gold">
+                        <h3>Gold Membership</h3>
+                        <p>Cost: $300/Year</p>
+                        <p>Click for more details</p>
+                    </div>
+                </div>
             </div>
+    
+            <!-- Modal Dialog-->
+            <dialog id="membershipModal">
+                <button id="closeModal" aria-label="Close">&times;</button>
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+            </dialog>
+     
         </main>
 
         <footer class="container">
