@@ -11,7 +11,7 @@ const membershipInfo = [
         "level": "bronze",
         "cost": "¥7600/year",
         "benefits": "Offers better community visibility than the Non-Profit membership, with additional networking opportunities and more promotional support."
-    },    
+    },
     {
         "name": "Silver Membership",
         "level": "silver",
@@ -34,14 +34,31 @@ document.addEventListener("DOMContentLoaded", () => {
     cards.forEach((card) => {
         const membershipLevel = card.getAttribute("data-membership");
         const dialog = card.querySelector(".membership-dialog");
+
+        // Safeguard against missing dialog
+        if (!dialog) {
+            console.warn("Dialog not found in this card.");
+            return;
+        }
+
         const closeButton = dialog.querySelector(".close-button");
+
+        // Safeguard against missing close button
+        if (!closeButton) {
+            console.warn("Close button not found in dialog.");
+            return;
+        }
 
         // Open the modal when the card is clicked
         card.addEventListener("click", () => {
             if (!dialog.open) {
-                const membershipData = membershipInfo.find(member => member.level === membershipLevel); // Get the corresponding membership data
-                updateDialogContent(dialog, membershipData); // Populate dialog with membership data
-                dialog.showModal(); // Show the dialog
+                const membershipData = membershipInfo.find(member => member.level === membershipLevel);
+                if (membershipData) {
+                    updateDialogContent(dialog, membershipData); // Populate dialog with membership data
+                    dialog.showModal(); // Show the dialog
+                } else {
+                    console.warn("Membership data not found for level:", membershipLevel);
+                }
             }
         });
 
@@ -56,6 +73,12 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateDialogContent(dialog, member) {
         const titleElement = dialog.querySelector("h4");
         const contentElement = dialog.querySelector("p");
+
+        // Safeguard against missing title or content elements
+        if (!titleElement || !contentElement) {
+            console.error("Missing elements in dialog to update content.");
+            return;
+        }
 
         // Update dialog content using the membership data
         titleElement.textContent = `${member.name}`;
