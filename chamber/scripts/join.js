@@ -1,81 +1,52 @@
-const url="data/member-level.json";
+const url = "data/member-level.json";
 
-// const openButton = document.querySelector("#openButton");
-const dialogBox = document.querySelector("#dialogBox");
-const dialogH4 = document.querySelector("#dialogBox h4");
-const dialogP = document.querySelector("#dialogBox p");
-const closeButton = document.querySelector("#closeButton");
+const modal = document.querySelector("#membershipModal");
+const modalTitle = document.querySelector("#modalTitle");
+const modalDescription = document.querySelector("#modalDescription");
+const closeModal = document.querySelector("#closeModal");
 
-const memberLevel = document.querySelector("#memberlevels");
-// const memberInfo = document.createElement("#memberlevels p");
+// Attach event listeners to the static membership cards
+document.querySelectorAll(".card").forEach(card => {
+    card.addEventListener("click", async () => {
+        const membershipLevel = card.getAttribute("data-membership");
+        
+        // Fetch and filter data for the selected membership
+        try {
+            const response = await fetch(url);
+            if (response.ok) {
+                const data = await response.json();
+                const selectedLevel = data.memberLevels.find(item => item.level === membershipLevel);
 
-
-closeButton.addEventListener("click", () => dialogBox.close());
-
-async function apiFetch(url) {
-// First:  await fetch(weatherUrl);      for the web page to responsd
-// Second: await response.json(); for the web page to send us the requested data
-    try {
-        const response = await fetch(url);
-        if (response.ok) {
-            const data = await response.json();
-            // console.log(data);    // testing only
-            displayMemberInfo(data);
-        } else {
-            throw Error(await response.text());
+                if (selectedLevel) {
+                    displayLevelDetails(selectedLevel);
+                } else {
+                    console.error("Membership level not found in JSON.");
+                }
+            } else {
+                throw new Error("Failed to fetch membership data.");
+            }
+        } catch (error) {
+            console.error(error);
         }
-    } catch (error) {
-        console.log(error);
-    }
-};
-
-function displayMemberInfo(data) {
-    console.log(data);
-    // const memberLevel = document.createElement("#memberlevels");
-
-    data.memberLevels.forEach(item => {
-        const levelDiv = document.createElement("div");
-        levelDiv.classList.add("card");
-        levelDiv.setAttribute("class", `${item.level}`);
-        console.log(`memberLevels: ${item.level}`);
-
-        levelDiv.innerHTML = `
-        <h4>${item.name}</h4>
-        <button>More Level Infomation</button>
-        `;
-
-
-        memberLevel.appendChild(levelDiv);
-
-        levelDiv.addEventListener("click", () => {
-            console.log(item);
-            displayLevelDetails(item);
-        });
     });
-};
+});
 
-
+// Function to display modal with membership info
 function displayLevelDetails(item) {
-    console.log("This displayLevelsData One!");
-    console.log(item);
-
-    let memberStr = `
-        <p>Membership Cost:     ${item.cost}</p>
-        <p>Membership Benefits: ${item.benefits}</p>
-        <p>------------------------------</p>
-    `;
-    console.log(`memberStr = ${memberStr}`);
+    // Remove existing color classes
+    modal.classList.remove("bronze", "silver", "gold", "np");
     
-    dialogH4.innerHTML = `${item.name}`;
-    dialogP.innerHTML = `${memberStr}`;
+    // Add class based on membership level
+    modal.classList.add(item.level);
 
-    // dialogBox.innerHTML = `
-    // <h4>${item.name}</h4>
-    // <p>${item.name}</p>
-    // <button id="closeButton">Close</button>
-    // `;
+    modalTitle.textContent = item.name;
+    modalDescription.innerHTML = `
+        <p><strong>Membership Cost:</strong> ${item.cost}</p>
+        <p><strong>Membership Benefits:</strong> ${item.benefits}</p>
+    `;
 
-    dialogBox.showModal();
-};
+    modal.showModal();
+}
 
-apiFetch(url);
+// Close modal when clicking the close button
+closeModal.addEventListener("click", () => modal.close());

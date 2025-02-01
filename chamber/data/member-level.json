@@ -1,28 +1,28 @@
 {
     "memberLevels": [
         {
-            "name": "Non-Prophet Membership",
+            "name": "Non-Profit Membership",
             "level": "np",
             "cost": "Free",
-            "benefits": "Some community exposure"
+            "benefits": "Provides basic community exposure and networking opportunities, ideal for smaller organizations or individuals just starting out."
         },
         {
             "name": "Bronze Membership",
             "level": "bronze",
             "cost": "¥7600/year",
-            "benefits": "More community exposure"
+            "benefits": "Offers better community visibility than the Non-Profit membership, with additional networking opportunities and more promotional support."
         },    
         {
             "name": "Silver Membership",
             "level": "silver",
-            "cost": "$100/year",
-            "benefits": "Good community exposure"
+            "cost": "¥15500/year",
+            "benefits": "Provides good community exposure, with more prominent visibility compared to Bronze, and priority access to networking events and increased promotional efforts."
         },
         {
             "name": "Gold Membership",
             "level": "gold",
-            "cost": "$200/year",
-            "benefits": "Mega community exposure"
+            "cost": "¥32000/year",
+            "benefits": "The most exclusive membership, offering the highest level of community exposure, premium access to top-tier events, and priority promotional support, providing maximum visibility and influence."
         }
     ]
 }

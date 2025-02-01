@@ -666,3 +666,52 @@ form {
         width: 90%;                    /* Make cards fit the screen */
         max-width: 300px;
     }
+/* Default modal styling */
+dialog#membershipModal {
+    width: 50%;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: none;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+/* Different colors for each membership level */
+dialog#membershipModal.np {
+    background-color: #76c7a1;  /* Green */
+    color: white;
+}
+
+dialog#membershipModal.bronze {
+    background-color: #cd7f32;  /* Bronze */
+    color: white;
+}
+
+dialog#membershipModal.silver {
+    background-color: #c0c0c0;  /* Silver */
+    color: black;
+}
+
+dialog#membershipModal.gold {
+    background-color: #ffd700;  /* Gold */
+    color: black;
+}
+
+/* Modal animation when opening */
+dialog[open] {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Close button styling */
+#closeModal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+}
