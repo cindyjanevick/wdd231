@@ -120,5 +120,5 @@ hamburgerElement.addEventListener('click', () => {
     hamburgerElement.classList.toggle('open');
 });
 
-// let spotlight = false;
+
 

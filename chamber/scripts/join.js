@@ -9,25 +9,21 @@ const closeModal = document.querySelector("#closeModal");
 document.querySelectorAll(".card").forEach(card => {
     card.addEventListener("click", async () => {
         const membershipLevel = card.getAttribute("data-membership");
-        
-        // Fetch and filter data for the selected membership
+
         try {
             const response = await fetch(url);
-            if (response.ok) {
-                const data = await response.json();
-                console.log(data);  // Log the fetched data for debugging
-                const selectedLevel = data.memberLevels.find(item => item.level === membershipLevel);
-
-                if (selectedLevel) {
-                    displayLevelDetails(selectedLevel);
-                } else {
-                    console.error("Membership level not found in JSON.");
-                }
+            if (!response.ok) throw new Error("Failed to fetch membership data.");
+            const data = await response.json();
+            console.log(data);  // Log the fetched data for debugging
+            
+            const selectedLevel = data.memberLevels.find(item => item.level === membershipLevel);
+            if (selectedLevel) {
+                displayLevelDetails(selectedLevel);
             } else {
-                throw new Error("Failed to fetch membership data.");
+                console.error("Membership level not found in JSON.");
             }
         } catch (error) {
-            console.error(error);
+            console.error("Error fetching or processing data:", error);
         }
     });
 });
