@@ -15,6 +15,7 @@ document.querySelectorAll(".card").forEach(card => {
             const response = await fetch(url);
             if (response.ok) {
                 const data = await response.json();
+                console.log(data);  // Log the fetched data for debugging
                 const selectedLevel = data.memberLevels.find(item => item.level === membershipLevel);
 
                 if (selectedLevel) {
@@ -35,10 +36,11 @@ document.querySelectorAll(".card").forEach(card => {
 function displayLevelDetails(item) {
     // Remove existing color classes
     modal.classList.remove("bronze", "silver", "gold", "np");
-    
+
     // Add class based on membership level
     modal.classList.add(item.level);
 
+    // Update modal content with available properties from the JSON file
     modalTitle.textContent = item.name;
     modalDescription.innerHTML = `
         <p><strong>Membership Cost:</strong> ${item.cost}</p>
