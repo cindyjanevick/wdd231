@@ -89,40 +89,67 @@
                     </form>
                 </div>
     
-                <!-- Membership cards  -->
-                
+                <!-- Membership cards with individual modals -->
                 <div class="cards-container">
                     <div class="card" data-membership="np">
                         <h3>Non-Profit Membership</h3>
-                        <p>Free</p>
+                        <!-- <p>Free</p> -->
                         <p>Click for more details</p>
+                        <dialog class="membership-dialog">
+                            <h4>Non-Profit Membership</h4>
+                            <p>Free Membership for non-profit organizations.</p>
+                            <button class="close-button">Close</button>
+                        </dialog>
                     </div>
                     <div class="card" data-membership="bronze">
                         <h3>Bronze Membership</h3>
-                        <p>Cost:¥7600/year</p>
+                        <!-- <p>Cost: ¥7600/year</p> -->
                         <p>Click for more details</p>
-    
+                        <dialog class="membership-dialog">
+                            <h4>Bronze Membership</h4>
+                            <p>Details about the Bronze Membership.</p>
+                            <button class="close-button">Close</button>
+                        </dialog>
                     </div>
                     <div class="card" data-membership="silver">
                         <h3>Silver Membership</h3>
-                        <p>Cost: ¥15500/year</p>
+                        <!-- <p>Cost: ¥15500/year</p> -->
                         <p>Click for more details</p>
+                        <dialog class="membership-dialog">
+                            <h4>Silver Membership</h4>
+                            <p>Details about the Silver Membership.</p>
+                            <button class="close-button">Close</button>
+                        </dialog>
                     </div>
                     <div class="card" data-membership="gold">
                         <h3>Gold Membership</h3>
-                        <p>Cost: ¥32000/year</p>
+                        <!-- <p>Cost: ¥32000/year</p> -->
                         <p>Click for more details</p>
+                        <dialog class="membership-dialog">
+                            <h4>Gold Membership</h4>
+                            <p>Details about the Gold Membership.</p>
+                            <button class="close-button">Close</button>
+                        </dialog>
                     </div>
                 </div>
-            </div>
-    
-            <!-- Modal Dialog-->
-            <dialog id="membershipModal">
-                <button id="closeModal" aria-label="Close">&times;</button>
-                <h2 id="modalTitle"></h2>
-                <p id="modalDescription"></p>
-            </dialog>
-     
+
+
+                <!-- Modal Dialog -->
+                <!-- <section id="memberlevels">
+                    <h2>Membership Levels</h2>
+                    <dialog id="dialogBox">
+                        <h4>Sample Level</h4>
+                        <p>Sample String</p>
+                        <button id="closeButton">Close</button>
+                    </dialog>
+                </section> -->
+
+            <!-- !-- Animated cards on the right side --> 
+        <div class="animated-cards-container">
+    <!-- Dynamically generated animated cards will go here -->
+</div>
+
+            
         </main>
 
         <footer class="container">

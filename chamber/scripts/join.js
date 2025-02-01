@@ -1,69 +1,42 @@
-const url = "data/member-level.json";
+document.addEventListener("DOMContentLoaded", () => {
+    // Fetch membership details from the JSON file
+    fetch('data/member-level.json')
+        .then(response => response.json())
+        .then(data => {
+            const memberLevels = data.memberLevels;
+            const cards = document.querySelectorAll(".card");
 
-// Cache DOM elements
-const modal = document.querySelector("#membershipModal");
-const modalTitle = document.querySelector("#modalTitle");
-const modalDescription = document.querySelector("#modalDescription");
-const closeModal = document.querySelector("#closeModal");
+            cards.forEach(card => {
+                const membershipType = card.getAttribute("data-membership"); // Get the membership level (e.g., np, bronze)
+                const modal = card.querySelector(".membership-dialog");
+                const closeButton = modal.querySelector(".close-button");
 
-// Add event listeners to cards
-document.querySelectorAll(".card").forEach(card => {
-    card.addEventListener("click", () => fetchMembershipData(card));
-});
+                // Find the relevant membership data from the JSON based on membership type
+                const membershipData = memberLevels.find(level => level.level === membershipType);
 
-// Fetch and display membership level data
-async function fetchMembershipData(card) {
-    const membershipLevel = card.getAttribute("data-membership");
+                // Open the modal when the card is clicked
+                card.addEventListener("click", () => {
+                    if (membershipData && !modal.open) {
+                        // Update the modal with fetched membership details
+                        const modalTitle = modal.querySelector("h4");
+                        const modalDescription = modal.querySelector("p");
 
-    try {
-        const data = await fetchData();
-        const selectedLevel = data.memberLevels.find(item => item.level === membershipLevel);
-        if (selectedLevel) {
-            showModal(selectedLevel);
-        } else {
-            console.error("Membership level not found in data.");
-        }
-    } catch (error) {
-        console.error("Error fetching membership data:", error);
-    }
-}
+                        // Set the modal content with the JSON data
+                        modalTitle.textContent = membershipData.name;
+                        modalDescription.innerHTML = `<strong>Cost:</strong> ${membershipData.cost}<br><br><strong>Benefits:</strong> ${membershipData.benefits}`;
 
-// Fetch JSON data
-async function fetchData() {
-    const response = await fetch(url);
-    if (!response.ok) throw new Error("Failed to fetch membership data.");
-    return response.json();
-}
+                        modal.showModal();
+                    }
+                });
 
-// Display modal with membership info
-function showModal(levelData) {
-    // Clear existing color classes
-    modal.classList.remove("bronze", "silver", "gold", "np");
-    
-    // Add class based on membership level
-    modal.classList.add(levelData.level);
-
-    // Update modal content
-    modalTitle.textContent = levelData.name;
-    modalDescription.innerHTML = `
-        <p><strong>Cost:</strong> ${levelData.cost}</p>
-        <p><strong>Benefits:</strong> ${levelData.benefits}</p>
-    `;
-
-    // Display modal if supported
-    if (modal.showModal) {
-        modal.showModal();
-    } else {
-        // Fallback for browsers without <dialog> support
-        modal.style.display = "block";
-    }
-}
-
-// Close modal
-closeModal.addEventListener("click", () => {
-    if (modal.close) {
-        modal.close();
-    } else {
-        modal.style.display = "none";
-    }
+                // Close the modal when the close button is clicked
+                closeButton.addEventListener("click", (event) => {
+                    modal.close();
+                    event.stopPropagation(); // Prevent triggering card click event when closing
+                });
+            });
+        })
+        .catch(error => {
+            console.error("Error fetching membership data:", error);
+        });
 });
