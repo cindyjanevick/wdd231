@@ -1,50 +1,52 @@
 const url = "data/member-level.json";
 
+// Cache DOM elements
 const modal = document.querySelector("#membershipModal");
 const modalTitle = document.querySelector("#modalTitle");
 const modalDescription = document.querySelector("#modalDescription");
 const closeModal = document.querySelector("#closeModal");
 
-// Attach event listeners to the static membership cards
+// Add event listeners to cards
 document.querySelectorAll(".card").forEach(card => {
-    card.addEventListener("click", async () => {
-        const membershipLevel = card.getAttribute("data-membership");
-
-        try {
-            const response = await fetch(url);
-            if (!response.ok) throw new Error("Failed to fetch membership data.");
-            const data = await response.json();
-            console.log(data);  // Log the fetched data for debugging
-            
-            const selectedLevel = data.memberLevels.find(item => item.level === membershipLevel);
-            if (selectedLevel) {
-                displayLevelDetails(selectedLevel);
-            } else {
-                console.error("Membership level not found in JSON.");
-            }
-        } catch (error) {
-            console.error("Error fetching or processing data:", error);
-        }
-    });
+    card.addEventListener("click", () => fetchMembershipData(card));
 });
 
-// Function to display modal with membership info
-function displayLevelDetails(item) {
-    // Remove existing color classes
+// Fetch and display membership level data
+async function fetchMembershipData(card) {
+    const membershipLevel = card.getAttribute("data-membership");
+
+    try {
+        const data = await fetchData();
+        const selectedLevel = data.memberLevels.find(item => item.level === membershipLevel);
+        if (selectedLevel) {
+            showModal(selectedLevel);
+        } else {
+            console.error("Membership level not found in data.");
+        }
+    } catch (error) {
+        console.error("Error fetching membership data:", error);
+    }
+}
+
+// Fetch JSON data
+async function fetchData() {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Failed to fetch membership data.");
+    return response.json();
+}
+
+// Display modal with membership info
+function showModal(levelData) {
     modal.classList.remove("bronze", "silver", "gold", "np");
+    modal.classList.add(levelData.level);
 
-    // Add class based on membership level
-    modal.classList.add(item.level);
-
-    // Update modal content with available properties from the JSON file
-    modalTitle.textContent = item.name;
+    modalTitle.textContent = levelData.name;
     modalDescription.innerHTML = `
-        <p><strong>Membership Cost:</strong> ${item.cost}</p>
-        <p><strong>Membership Benefits:</strong> ${item.benefits}</p>
+        <p><strong>Cost:</strong> ${levelData.cost}</p>
+        <p><strong>Benefits:</strong> ${levelData.benefits}</p>
     `;
-
     modal.showModal();
 }
 
-// Close modal when clicking the close button
+// Close modal
 closeModal.addEventListener("click", () => modal.close());
