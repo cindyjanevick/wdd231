@@ -715,3 +715,6 @@ dialog[open] {
     cursor: pointer;
     color: black;
 }
+.form-layout p{
+    color: var(--active_yellow);
+}
