@@ -4,12 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-        <meta name="description" content="WDD231 W02 Chamber Directory Page">
+        <meta name="description" content="WDD231 Chamber of Commerce Join Page">
         <meta name="author" content="Cindy Jane Vick">
         <title>WDD231 Directory Page - Cindy Jane Vick</title>
 
         <!-- social media meta tags -->
-        <meta property="og:title" content="WDD231 Chamber Directory Page">
+        <meta property="og:title" content="WDD231 - Join Page - Misawa Chamber of Commerce">
         <meta property="og:type" content="website">
         <meta property="og:description" content="WDD231 Chamber Directory Page developed by Cindy Vick.">
         <meta property="og:image" content="https://cindyjanevick.github.io/wdd231/chamber/images/misawa_shi.webp">
@@ -52,36 +52,36 @@
         
         <main>
             <div class="form-grid-layout">
-                <!-- Form on the left side -->
+                <!-- Form  -->
                 <div class="form-layout">
                     <h1>Join Misawa Chamber of Commerce</h1>
                     <p>* Indicates a required field </p>
                     <form method="GET" action="thankyou.html" class="designOne">
-                        <label>First Name <input type="text" name="first" required autocomplete="given-name"
+                        <label>First Name <span>*</span><input type="text" name="first" required autocomplete="given-name"
                                 title="Your First Name"></label>
-                        <label>Last Name <input type="text" name="last" required autocomplete="family-name"
+                        <label>Last Name <span>*</span><input type="text" name="last" required autocomplete="family-name"
                                 title="Your Last Name"></label>
                         <label>Organizational Title
                             <input type="text" name="title" required autocomplete="organization-title"
                                 pattern="^[A-Za-z\s\-]{7,}$"
                                 title="Please enter a title with at least 7 characters using only letters, hyphens, and spaces">
                         </label>
-                        <label>Cell Phone <input type="tel" name="phone" autocomplete="tel"
+                        <label>Phone Number <span>*</span><input type="tel" name="phone" autocomplete="tel"
                                 title="A Phone Number with dashes" placeholder="987-555-1234"></label>
-                        <label>Email <input type="email" name="email" required placeholder="example@gmail.com"
+                        <label>Email <span>*</span><input type="email" name="email" required placeholder="example@gmail.com"
                                 title="Your Email" autocomplete="email"></label>
-                        <label>Business/Organization Name <input type="text" name="org" required autocomplete="organization"
+                        <label>Business/Organization Name <span>*</span><input type="text" name="org" required autocomplete="organization"
                                 title="Your Organizational/Business Title"></label>
     
                         <h3>Membership Level</h3>
-                        <label><input type="radio" name="membership" value="NP" checked> NP Membership</label>
+                        <label><input type="radio" name="membership" value="NP" checked> Non - Profit Membership</label>
                         <label><input type="radio" name="membership" value="Bronze"> Bronze Membership</label>
                         <label><input type="radio" name="membership" value="Silver"> Silver Membership</label>
                         <label><input type="radio" name="membership" value="Gold"> Gold Membership</label>
     
                         <label>Business/Organization Description</label>
                         <textarea id="description" name="description" rows="4" required placeholder="Description"
-                            title="Describe your business or organization, including its purpose and services"></textarea>
+                            title="Describe your business or organization"></textarea>
     
                         <input type="hidden" id="timestamp" name="timestamp">
     
@@ -89,11 +89,11 @@
                     </form>
                 </div>
     
-                <!-- Membership cards on the right side -->
+                <!-- Membership cards  -->
                 
                 <div class="cards-container">
                     <div class="card" data-membership="np">
-                        <h3>NP Membership</h3>
+                        <h3>Non-Profit Membership</h3>
                         <p>Free</p>
                         <p>Click for more details</p>
                     </div>
