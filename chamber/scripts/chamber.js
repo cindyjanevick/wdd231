@@ -3,7 +3,7 @@ const hamburgerElement = document.querySelector('#myButton'); // TODO
 // const navElement = document.querySelector('.menuLinks'); //
 const navElement = document.querySelector('#animateme'); // TODO
 
-const membersURL = 'data/members.json';
+const membersURL = './data/members.json';
 const cards = document.querySelector('#cards');
   
 console.log("Going to GET business data");
