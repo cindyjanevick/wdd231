@@ -30,7 +30,7 @@ async function getBusinessData() {
 const displayBusinesses = (companies) => {
     console.log("Going to DISPLAY business data");
     console.table(companies);
-    console.log(`Current grid choise is: ${gridChoice}`);
+    console.log(`Current grid choice is: ${gridChoice}`);
 
 	// cards defined at top of this file
 	cards.innerHTML = "";
