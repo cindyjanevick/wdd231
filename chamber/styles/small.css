@@ -48,13 +48,9 @@ header, body {
 
 header {
     display: flex;
-    /* additions */
-    /* flex-direction: row;
-    align-items: center;
-    
-    background-color: var(--back_color2); 
-    color: white; */
+   
 }
+
 /* more additions */
 header h1 {
     font-size: 1.75rem;
@@ -91,7 +87,7 @@ nav {
 
 
 ul.menuLinks li a {
-    /* border: 1px dashed pink; */
+    
     display: block;
     padding: .75rem 1vw;
     color: #fff;
@@ -160,33 +156,6 @@ footer.container {
     margin-top: 1rem;
     min-height:100px;
 }
-/* footer a{
-    place-items: center;
-} */
-/* footer {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    background-color: var(--back_color1);
-    color: white;
-    padding: 1rem;
-}
-
-footer img {
-    margin-bottom: 1rem;
-}
-
-footer p {
-    margin: 0.5rem 0;
-} */
-/* BUSINESS CARDS */
-
-/* section { */
-    /* display: grid; */
-    /* grid-template-columns: 2fr 1fr 1fr;
-    gap: 5px;
-    justify-content: space-around;
-} */
 
 #cards {
 	display: grid;
@@ -228,21 +197,15 @@ footer p {
 /* end of addition */
 section {
     padding: 1rem;
-    /* border: 1px solid rgba(0, 0, 0, 0.1); */
     background-color: var(--accent_color2);
-    /* color: var(--back_color1); */
-
-	display: flex;
+    display: flex;
 	flex-direction: column;
 	align-items: center;
     gap:5px;
     
-	/* justify-items: center; */
+	
 }
-/* #buss h2{
-    border-radius: 10px;
-    background-color: #1B4332;
-} */
+
 
 section img {
     width: 140px;
@@ -301,6 +264,7 @@ section img {
     transition: all 0.3s ease-in-out;
 }
 
+/* main content */
 main {
     max-width: 1200px;
     width: 100%;
@@ -391,15 +355,6 @@ main {
     position: relative;
 }
   
-/* .hero-text {
-    position: absolute;
-    top: 0%;
-    right: 10%;
-    color: white;
-    background-color: var(--back_color2);
-    /* width: 40%;
-    height: 80%;
-} */
 
 .join-action {
     top: auto;
@@ -426,6 +381,8 @@ main {
 
 /* join page */
 /* Form and card layout */
+
+
 .form-grid-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
