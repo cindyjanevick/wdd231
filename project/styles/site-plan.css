@@ -1,0 +1,158 @@
+:root {
+    --primary-color: #3957A5;    /* Skyline Blue */
+    --secondary-color: #89CFFD;  /* Soft Blue */
+    --accent1-color: #5f839c;    /* Light Sky Blue */
+    --accent2-color: #282C34;    /* Concrete Gray */
+
+
+ /* Updated Fonts */
+    --heading-font: "Neuton", serif;
+    --paragraph-font: "Delius", sans-serif;
+    --navigation-font: "Delius", sans-serif;
+    --footer-font: "Delius", sans-serif;
+}
+  
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4em;
+    font-size: 1.1rem;
+    text-align: center;
+    font-family: var(--paragraph-font);
+}
+  
+img {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+}
+  
+h1, h2, h3, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+h4 {
+    color: var(--accent1-color);  /* Updated to use accent1 color */
+}
+  
+h2 {
+    text-align: center;
+}
+  
+hr {
+    height: 3px;
+    margin: 35px 0;
+    background: var(--secondary-color);
+}
+  
+header {
+    padding: 1em;
+    text-align: center;
+    color: var(--accent2-color);
+    background-color: var(--secondary-color);
+}
+
+header > h1, header > h2 {
+    color: var(--accent2-color);
+}
+  
+p {
+    font-family: var(--paragraph-font);
+    color: var(--accent2-color);
+}
+  
+.colors {
+    width: 100%;
+    min-width: 350px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.colors th {
+    background-color: #92dc98;
+}
+  
+.colors td {
+    width: 20%;
+    height: 3em;
+}
+
+.accent2 {
+    color: white;
+}
+
+.primary {
+    background-color: var(--primary-color);
+    color:white;
+}
+ 
+.secondary {
+    background-color: var(--secondary-color);
+}
+
+.accent1 {
+    background-color: var(--accent1-color);
+}
+
+.accent2 {
+    background-color: var(--accent2-color);
+}
+  
+p.colored {
+    background-color: var(--secondary-color);
+    color: var(--accent2-color);
+    padding: 1em;
+}
+  
+nav {
+    background-color: var(--primary-color);
+    line-height: 3em;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: var(--navigation-font);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav a {
+    font-family: var(--navigation-font);  
+    font-weight: 700;
+    letter-spacing: .2rem;
+    padding: 1em;
+    min-width: 120px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:link, nav a:visited {
+    color: var(--accent2-color);
+}
+
+nav a:hover {
+    color: var(--accent1-color);
+    background-color: var(--secondary-color);
+}
+  
+footer {
+    background-color: var(--secondary-color);
+    border-top: 1px solid var(--secondary-color);
+    border-bottom: 1px solid var(--secondary-color);
+    text-align: center;
+    padding: 10px;
+    font-family: var(--footer-font);
+}
+
+footer p {
+    font-size: 1.2rem;
+    color: var(--accent2-color);
+    font-weight: 900;
+}
+
+#lastModified {
+    color: var(--accent2-color);
+    font-weight: 900;
+}
