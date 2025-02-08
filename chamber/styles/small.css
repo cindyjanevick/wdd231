@@ -688,6 +688,7 @@ dialog[open] {
     padding: 20px;
     justify-items: center;
 }
+
 /* Styling for the Visit Message */
 #visit-message {
     font-size: 1.2em;
@@ -695,6 +696,23 @@ dialog[open] {
     margin: 15px 0;
     color: #333;
 }
+
+/* Mobile (320px to 640px) */
+@media (max-width: 640px) {
+    .grid-container1 {
+        grid-template-columns: 1fr; /* Single column for mobile */
+        grid-template-areas: 
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7"
+            "card8"; /* Named areas for single-column grid */
+    }
+}
+
 /* Medium Screen (641px to 1024px) */
 @media (min-width: 641px) and (max-width: 1024px) {
     .grid-container1 {
@@ -706,6 +724,7 @@ dialog[open] {
             "card7 card8"; /* Named areas for 2-column grid */
     }
 
+    /* Grid placement for cards */
     .card:nth-child(1) { grid-area: card1; }
     .card:nth-child(2) { grid-area: card2; }
     .card:nth-child(3) { grid-area: card3; }
@@ -725,31 +744,7 @@ dialog[open] {
             "card5 card6 card7 card8"; /* Named areas for 4-column grid */
     }
 
-    .card:nth-child(1) { grid-area: card1; }
-    .card:nth-child(2) { grid-area: card2; }
-    .card:nth-child(3) { grid-area: card3; }
-    .card:nth-child(4) { grid-area: card4; }
-    .card:nth-child(5) { grid-area: card5; }
-    .card:nth-child(6) { grid-area: card6; }
-    .card:nth-child(7) { grid-area: card7; }
-    .card:nth-child(8) { grid-area: card8; }
-}
-
-/* Mobile (320px to 640px) */
-@media (max-width: 640px) {
-    .grid-container1 {
-        grid-template-columns: 1fr; /* Single column for mobile */
-        grid-template-areas: 
-            "card1"
-            "card2"
-            "card3"
-            "card4"
-            "card5"
-            "card6"
-            "card7"
-            "card8"; /* Named areas for single-column grid */
-    }
-
+    /* Grid placement for cards */
     .card:nth-child(1) { grid-area: card1; }
     .card:nth-child(2) { grid-area: card2; }
     .card:nth-child(3) { grid-area: card3; }
@@ -767,18 +762,25 @@ dialog[open] {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
+    padding: 10px; /* Ensure the card has some padding inside */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
 }
 
+/* Hover effect for cards */
 .card:hover {
-    transform: scale(1.05); /* Hover effect */
+    transform: scale(1.05); /* Slight scaling on hover */
 }
 
+/* Image styling inside cards */
 .card img {
     width: 100%;
     height: 200px;
-    object-fit: cover;
+    object-fit: cover; /* Ensure the image covers the area properly */
+    border-radius: 8px; /* Optional: add rounded corners to images */
 }
 
+/* Card content styles */
 .card h2 {
     font-size: 1.5em;
     margin: 15px;
@@ -795,7 +797,6 @@ dialog[open] {
 }
 
 .card button {
-    
     background-color: var(--accent_color4);
     border: none;
     padding: 10px;
@@ -803,6 +804,7 @@ dialog[open] {
     cursor: pointer;
     font-size: 1em;
     margin-bottom: 15px;
+    border-radius: 8px;
 }
 
 .card button:hover {
@@ -872,4 +874,9 @@ dialog[open] {
 .modal-address {
     font-style: italic;
     margin-bottom: 10px;
+}
+section h2 {
+    text-align: center; /* Optional: centers the heading */
+    font-size: 2em; /* Adjust size as needed */
+    margin-bottom: 20px; /* Space between the heading and the grid */
 }
