@@ -89,17 +89,23 @@ cards.forEach(card => {
         const modalContent = modals[modalId];
 
         if (modalContent) {
+            // Set the modal content
+            // modalTitle.textContent = modalContent.title;  // Set the modal title
+            // modalImage.src = modalContent.image;          // Set the modal image source
+            // modalImage.alt = modalContent.title;          // Set the image alt text
+            // modalAddress.textContent = modalContent.address;  // Set the modal address
+            // modalDescription.textContent = modalContent.description;  // Set the modal description
             modalTitle.textContent = modalContent.title || "Default Title";  // Set the modal title
             modalImage.src = modalContent.image || 'default-image.jpg';      // Set the modal image source
             modalImage.alt = modalContent.title || "Modal Image";            // Set the image alt text
             modalAddress.textContent = modalContent.address || "No address available";  // Set the modal address
             modalDescription.textContent = modalContent.description || "No description available.";  // Set the modal description
 
+            modal.classList.add('show'); // Show the modal by adding 'show' class
             modal.classList.remove('hidden'); // Show the modal
         }
     });
 });
-
 
 // Close modal when clicking the close button
 closeButton.addEventListener('click', () => {
@@ -110,5 +116,4 @@ closeButton.addEventListener('click', () => {
 window.addEventListener('click', (e) => {
     if (e.target === modal) {
         modal.classList.remove('show'); // Hide the modal if clicked outside
-    }
-});
+    }})

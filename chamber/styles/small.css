@@ -198,7 +198,8 @@ footer.container {
 section {
     padding: 1rem;
     background-color: var(--accent_color2);
-    display: flex;
+    /* display: flex; */
+    display:grid;
 	flex-direction: column;
 	align-items: center;
     gap:5px;
@@ -704,7 +705,7 @@ dialog[open] {
             "card5 card6"
             "card7 card8"; /* Named areas for 2-column grid */
     }
-    
+
     .card:nth-child(1) { grid-area: card1; }
     .card:nth-child(2) { grid-area: card2; }
     .card:nth-child(3) { grid-area: card3; }
@@ -723,7 +724,7 @@ dialog[open] {
             "card1 card2 card3 card4"
             "card5 card6 card7 card8"; /* Named areas for 4-column grid */
     }
-    
+
     .card:nth-child(1) { grid-area: card1; }
     .card:nth-child(2) { grid-area: card2; }
     .card:nth-child(3) { grid-area: card3; }
@@ -794,6 +795,7 @@ dialog[open] {
 }
 
 .card button {
+    
     background-color: var(--accent_color4);
     border: none;
     padding: 10px;
