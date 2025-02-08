@@ -676,3 +676,198 @@ dialog[open] {
 .form-layout p{
     color: var(--active_yellow);
 }
+
+
+/* discover */
+/* Container for the Grid */
+.grid-container1 {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to one column for mobile view */
+    grid-gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+/* Styling for the Visit Message */
+#visit-message {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #333;
+}
+/* Medium Screen (641px to 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .grid-container1 {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8"; /* Named areas for 2-column grid */
+    }
+    
+    .card:nth-child(1) { grid-area: card1; }
+    .card:nth-child(2) { grid-area: card2; }
+    .card:nth-child(3) { grid-area: card3; }
+    .card:nth-child(4) { grid-area: card4; }
+    .card:nth-child(5) { grid-area: card5; }
+    .card:nth-child(6) { grid-area: card6; }
+    .card:nth-child(7) { grid-area: card7; }
+    .card:nth-child(8) { grid-area: card8; }
+}
+
+/* Large Screen (1025px and above) */
+@media (min-width: 1025px) {
+    .grid-container1 {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns */
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8"; /* Named areas for 4-column grid */
+    }
+    
+    .card:nth-child(1) { grid-area: card1; }
+    .card:nth-child(2) { grid-area: card2; }
+    .card:nth-child(3) { grid-area: card3; }
+    .card:nth-child(4) { grid-area: card4; }
+    .card:nth-child(5) { grid-area: card5; }
+    .card:nth-child(6) { grid-area: card6; }
+    .card:nth-child(7) { grid-area: card7; }
+    .card:nth-child(8) { grid-area: card8; }
+}
+
+/* Mobile (320px to 640px) */
+@media (max-width: 640px) {
+    .grid-container1 {
+        grid-template-columns: 1fr; /* Single column for mobile */
+        grid-template-areas: 
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7"
+            "card8"; /* Named areas for single-column grid */
+    }
+
+    .card:nth-child(1) { grid-area: card1; }
+    .card:nth-child(2) { grid-area: card2; }
+    .card:nth-child(3) { grid-area: card3; }
+    .card:nth-child(4) { grid-area: card4; }
+    .card:nth-child(5) { grid-area: card5; }
+    .card:nth-child(6) { grid-area: card6; }
+    .card:nth-child(7) { grid-area: card7; }
+    .card:nth-child(8) { grid-area: card8; }
+}
+
+/* Card Styling */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Hover effect */
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin: 15px;
+}
+
+.card p {
+    margin: 15px;
+    font-size: 1em;
+}
+
+.card address {
+    font-style: italic;
+    margin: 15px;
+}
+
+.card button {
+    background-color: #76c7a1;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.card button:hover {
+    background-color: #4b9f7d;
+}
+
+/* Modal styles when it's visible */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: none; /* Start hidden */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content styles */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    position: relative; /* Needed for absolute positioning of the close button */
+}
+
+/* Close button styles */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333; /* Dark color for visibility */
+    background: none;
+    border: none;
+}
+
+/* Image and text styling inside the modal */
+.modal-image {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.modal-description {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Add a class for when the modal is visible */
+.modal.show {
+    display: flex; /* Show the modal */
+}
+
+/* Optional: Add some styles for the modal text to enhance readability */
+.modal-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.modal-address {
+    font-style: italic;
+    margin-bottom: 10px;
+}
