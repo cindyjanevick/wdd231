@@ -794,7 +794,7 @@ dialog[open] {
 }
 
 .card button {
-    background-color: #76c7a1;
+    background-color: var(--accent_color4);
     border: none;
     padding: 10px;
     color: white;
