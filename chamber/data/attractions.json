@@ -1,0 +1,61 @@
+{
+    "attractions": [
+      {
+        "id": "shiroyama",
+        "title": "Shiroyama Park",
+        "image": "images/shiroyama.webp",
+        "address": "1 Shiroyama, Misawa, Aomori 033-0041, Japan",
+        "description": "Shiroyama Park is a beautiful park featuring a reconstructed samurai-era castle surrounded by hundreds of cherry trees, ideal for sightseeing and picnics."
+      },
+      {
+        "id": "ice-arena",
+        "title": "Misawa Ice Arena",
+        "image": "images/icearena.webp",
+        "address": "1-3-10 Miyata, Misawa, Aomori 033-0023, Japan",
+        "description": "Misawa Ice Arena offers an indoor ice rink for skating and events, perfect for winter fun year-round."
+      },
+      {
+        "id": "misawa-park",
+        "title": "Misawa Park",
+        "image": "images/park.webp",
+        "address": "2 Chome-1-1 Misawa, Aomori 033-0031, Japan",
+        "description": "Misawa Park has a wide variety of activities, including camping sites and cabins for a relaxing outdoor experience."
+      },
+      {
+        "id": "aviation-museum",
+        "title": "Misawa Aviation Science Museum",
+        "image": "images/museum.webp",
+        "address": "1-1 Chuo, Misawa, Aomori 033-0034, Japan",
+        "description": "The Misawa Aviation Science Museum exhibits aircraft and aerospace technology, offering an educational experience for aviation enthusiasts."
+      },
+      {
+        "id": "lake-ogawara",
+        "title": "Lake Ogawara",
+        "image": "images/lakeogawara.webp",
+        "address": "Ogawara, Aomori 039-3554, Japan",
+        "description": "Lake Ogawara is a large, scenic lake, perfect for fishing, boating, and enjoying nature. It's the eleventh largest lake in Japan."
+      },
+      {
+        "id": "air-base",
+        "title": "Misawa Air Base",
+        "image": "images/airbase.webp",
+        "address": "Misawa, Japan",
+        "description": "Misawa Air Base is an important military base shared by the Japan Air Self-Defense Force and the United States Armed Forces, offering unique aviation experiences."
+      },
+      {
+        "id": "kushihiki",
+        "title": "Kushihiki Shrine",
+        "image": "images/shrine.webp",
+        "address": "1-1 Misawa, Aomori 039-0213, Japan",
+        "description": "Kushihiki Shrine is one of the oldest Shinto shrines in the region, offering a peaceful and spiritual atmosphere."
+      },
+      {
+        "id": "terayama",
+        "title": "Shuji Terayama Museum",
+        "image": "images/shujiterayama.webp",
+        "address": "1-7-3 Hachiman, Misawa, Aomori 033-0034, Japan",
+        "description": "The Shuji Terayama Museum honors the life and works of Shuji Terayama, one of Japan's most influential avant-garde writers and filmmakers."
+      }
+    ]
+  }
+  
