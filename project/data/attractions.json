@@ -1,87 +1,110 @@
 [
-    {
+  {
       "name": "Shibuya Scramble Crossing",
       "address": "Shibuya Crossing, Shibuya City, Tokyo 150-8010, Japan",
       "description": "Experience the energy of the world's busiest pedestrian crossing, where hundreds cross from all directions simultaneously.",
       "cost": "Free",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Shibuya_Crossing%2C_Tokyo%2C_Japan_%28Unsplash%29.jpg"
-    },
-    {
+      "categories": ["Culture"],
+      "image_url": "https://images.pexels.com/photos/3402955/pexels-photo-3402955.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "url":"https://en.wikipedia.org/wiki/Shibuya_Crossing"
+  },
+  {
       "name": "Akihabara (Electric Town)",
       "address": "Sotokanda, Chiyoda City, Tokyo 101-0021, Japan",
       "description": "Dive into Tokyo's hub for electronics, anime, and manga. Explore multi-story stores, themed cafes, and arcades.",
       "cost": "Varies; entry to most stores is free",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Akihabara_Electric_Town.jpg"
-    },
-    {
+      "categories": ["Culture"],
+      "image_url": "https://images.pexels.com/photos/30560602/pexels-photo-30560602/free-photo-of-vibrant-nightlife-in-akihabara-tokyo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "url":"https://en.wikipedia.org/wiki/Akihabara"
+  },
+  {
       "name": "teamLab Planets TOKYO",
       "address": "6 Chome-1-16 Toyosu, Koto City, Tokyo 135-0061, Japan",
       "description": "Immerse yourself in interactive digital art installations that engage all your senses.",
       "cost": "¥3,200 for adults",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/TeamLab_Planets_TOKYO.jpg"
-    },
-    {
+      "categories": ["Paid"],
+      "image_url": "https://greatertokyo.jp/wp-content/uploads/2024/02/01_Universe-of-Water-Particles-on-a-Rock-where-People-Gather_main_re.jpg",
+      "url":"https://www.teamlab.art/jp/e/planets/"
+  },
+  {
       "name": "Tokyo Disneyland and DisneySea",
       "address": "1-1 Maihama, Urayasu, Chiba 279-0031, Japan",
       "description": "Experience the magic at Tokyo Disneyland or the unique nautical-themed DisneySea.",
       "cost": "¥7,900 for adults",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Tokyo_Disneyland_Cinderella_Castle.jpg"
-    },
-    {
+      "categories": ["Paid"],
+      "image_url": "https://media2.tokyodisneyresort.jp/home/top/main/2025/01/mainL_01.jpg",
+      "url":"https://www.tokyodisneyresort.jp/en/tdl/"
+  },
+  {
       "name": "Tsukiji Outer Market",
       "address": "4 Chome-16-2 Tsukiji, Chuo City, Tokyo 104-0045, Japan",
       "description": "Savor fresh seafood, sushi, and traditional snacks in this bustling market.",
       "cost": "Varies; no entry fee",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Tsukiji_Outer_Market.jpg"
-    },
-    {
+      "categories": ["Free"],
+      "image_url": "https://images.pexels.com/photos/18848579/pexels-photo-18848579/free-photo-of-people-at-tsukiji-market-at-night-tokyo-japan.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "url":"https://www.tsukiji.or.jp/english/"
+  },
+  {
       "name": "Senso-ji Temple",
       "address": "2 Chome-3-1 Asakusa, Taito City, Tokyo 111-0032, Japan",
       "description": "Visit Tokyo's oldest Buddhist temple, explore Nakamise Shopping Street, and experience traditional culture.",
       "cost": "Free",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Senso-ji_Temple.jpg"
-    },
-    {
+      "categories": ["Culture"],
+      "image_url": "https://images.pexels.com/photos/861446/pexels-photo-861446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "url":"https://www.senso-ji.jp/english/"
+  },
+  {
       "name": "Ghibli Museum",
       "address": "1 Chome-1-83 Shimorenjaku, Mitaka, Tokyo 181-0013, Japan",
       "description": "Delve into the world of Studio Ghibli with exhibits, short films, and art displays.",
       "cost": "¥1,000 for adults",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Ghibli_Museum.jpg"
-    },
-    {
+      "categories": ["Paid"],
+      "image_url": "https://www.tokyoupdates.metro.tokyo.lg.jp/en/assets_c/2022/12/J-165_1_Z6D_9913-thumb-1600x900---4945.jpg",
+      "url":"https://www.ghibli-museum.jp/en/"
+  },
+  {
       "name": "Omoide Yokocho (Memory Lane)",
       "address": "1 Chome-2 Nishishinjuku, Shinjuku City, Tokyo 160-0023, Japan",
       "description": "Relish grilled skewers and drinks in this nostalgic alleyway filled with tiny eateries.",
       "cost": "Varies; no entry fee",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Omoide_Yokocho.jpg"
-    },
-    {
+      "categories": ["Free"],
+      "image_url": "https://japan-tattoo.jp/wp-content/uploads/2019/10/Shinjuku-Omoide-Yokocho-v01.jpg",
+      "url":"https://en.shinjuku-omoide.com/"
+  },
+  {
       "name": "Shinjuku Gyoen National Garden",
       "address": "11 Naitomachi, Shinjuku City, Tokyo 160-0014, Japan",
       "description": "A vast garden featuring Japanese, English, and French landscapes, ideal for relaxation.",
       "cost": "¥500 for adults",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Shinjuku_Gyoen.jpg"
-    },
-    {
+      "categories": ["Nature"],
+      "image_url": "https://images.pexels.com/photos/19658293/pexels-photo-19658293/free-photo-of-stone-pines-in-garden-in-tokyo-japan.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "url":"https://www.env.go.jp/garden/shinjukugyoen/english/index.html"
+  },
+  {
       "name": "Takeshita Street in Harajuku",
       "address": "1 Chome Jingumae, Shibuya City, Tokyo 150-0001, Japan",
       "description": "Explore this vibrant street known for its trendy shops, unique fashion, and delicious crepes.",
       "cost": "Varies; no entry fee",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Takeshita_Street_Harajuku.jpg"
-    },
-    {
-      "name": "Animal Cafés (Owl, Cat, Hedgehog, etc.)",
+      "categories": ["Culture"],
+      "image_url": "https://japancrate.com/cdn/shop/articles/shutterstock_2017501172.jpg?v=1724997533",
+      "url":"https://en.wikipedia.org/wiki/Harajuku"
+  },
+  {
+      "name": "Animal Cafés (Owl,Hedgehog, etc.)",
       "address": "Various locations in Tokyo",
       "description": "Enjoy coffee while interacting with owls, cats, hedgehogs, and other cute animals in unique themed cafés.",
       "cost": "¥1,000 - ¥2,000 per hour",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Owl_Cafe_Tokyo.jpg"
-    },
-    {
+      "categories": ["Paid"],
+      "image_url": "https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/02/a0002888/img/basic/a0002888_main.jpg",
+      "url":"https://harajukukawaiiland-kyunkyun.com/"
+  },
+  {
       "name": "Sumo Morning Practice in Ryogoku",
       "address": "Sumo Stables, Ryogoku, Tokyo",
       "description": "Watch sumo wrestlers train up close in a traditional sumo stable.",
       "cost": "Free (but some stables require reservations)",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Sumo_Wrestling_Training.jpg"
-    }
-  ]
-  
+      "categories": ["Culture"],
+      "image_url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/12/78/85.jpg",
+      "url":"https://arashio.net/tour_e.html"
+  }
+]

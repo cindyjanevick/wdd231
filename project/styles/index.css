@@ -492,4 +492,118 @@ ul.menuLinks li a.active {
     color: #555;
 }
 
+/* Styles for the Attractions Grid and Cards */
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+.attractions-heading {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--accent_color3);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    animation: fadeInSlide 1s ease-out;
+    text-shadow: 2px 2px 8px var(--accent_color2);
+}
+
+
+.attractions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.attraction-card {
+    background-color: var(--back_color3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 400px; /* Set a fixed height for the card */
+}
+
+.attraction-card:hover {
+    transform: scale(1.05);
+}
+
+.attraction-card figure {
+    margin: 0;
+}
+
+.attraction-card img {
+    width: 100%;
+    height: 200px; /* Set a fixed height for images */
+    object-fit: cover; /* Ensures images fill the container proportionally */
+    display: block;
+}
+
+.attraction-card figcaption {
+    padding: 10px;
+    background-color: var(--back_color1);
+}
+
+.attraction-card h3 {
+    font-family: 'Neuton', sans-serif;
+    color: var(--accent_color2);
+    font-size: 1.5em;
+    margin: 0 10px
+}
+
+.attraction-card p {
+    color: var(--accent_color2);
+    font-size:11px;
+    margin:0 5px;
+}
+
+.learn-more-btn-attraction {
+    border-radius: 5px;
+    background-color: var(--accent_color1);
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-btn-attraction:hover {
+    background-color: var(--active_blue);
+}
+
+/* Styles for Category Filters */
+.filters {
+    margin: 20px 0;
+}
+.filters h2{
+    text-align: left;
+    font-size: 16px;
+}
+
+.category-filters {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+}
+
+.filter-btn {
+    background-color: var(--active_blue);
+    color: var(--accent_color2);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--active_blue);
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tokyo Travel Guide Homepage by Cindy Jane Vick">
+    <meta name="author" content="Cindy Jane Vick">
+    <title>Tokyo Travel Guide Homepage</title>
+
+    <!-- Social media meta tags -->
+    <meta property="og:title" content="Tokyo Travel Guide Homepage">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Tokyo Travel Guide Homepage developed by Cindy Vick.">
+    <meta property="og:image" content="https://cindyjanevick.github.io/wdd231/chamber/images/misawa_shi.webp">
+    <meta property="og:url" content="https://cindyjanevick.github.io/wdd231/chamber/directory.html#">
+
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/small.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <script src="scripts/footer.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/attractions.js" defer></script>
+</head>
+<body>
+    <header class="container">
+        <div>
+            <img src="images/logo2.png" alt="Tokyo Travel Logo" loading="lazy" width="160" height="80">
+        </div>
+        <div class="pad">
+            <h1>Tokyo Travel Guide</h1>            
+        </div>
+        <button id="myButton" aria-label="Tokyo Travel Logo"></button>
+    </header>
+
+    <nav id="animateme">
+        <ul class="menuLinks">
+            <li><a href="index.html" title="Home">Home</a></li>
+            <li><a href="attractions.html" title="Attractions" class="active">Attractions</a></li>
+            <li><a href="restaurants.html" title="Restaurants">Restaurants</a></li>
+            <li><a href="contactus.html" title="Contact Us">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Tourist Attractions Heading -->
+        <h2 class="attractions-heading">🗼Tourist Attractions 🏯</h2>
+
+        <!-- Categories/Filters Section -->
+        <section class="filters">
+            <h2>Explore by Category</h2>
+            <ul class="category-filters">
+                <li><button class="filter-btn" data-category="all">All</button></li>
+                <li><button class="filter-btn" data-category="free">Free</button></li>
+                <li><button class="filter-btn" data-category="paid">Paid</button></li>
+                <li><button class="filter-btn" data-category="culture">Culture</button></li>
+                <li><button class="filter-btn" data-category="nature">Nature</button></li>
+            </ul>
+        </section>
+
+        <!-- Attractions Grid -->
+        <section class="attractions-grid" id="attractions-container">
+            <!-- Attraction Cards will be inserted here dynamically -->
+        </section>
+    </main>
+
+    <footer class="container">
+        <div>
+            <img src="images/logo2.png" alt="Tokyo Travel Logo" loading="lazy" width="100" height="90">
+            <p>Tokyo Travel Guide</p>
+            <p>2-1-1 Sawai-Cho, Tokyo</p>
+            <p>Minato, 033-0011</p>
+            <p>0176-53-2175</p>
+            <p>http://www.ttg.or.jp/</p>
+        </div>
+        <div>
+            <a href="https://www.facebook.com/misawa.or.jp/" target="_blank">
+                <img src="images/facebook_logo.png" alt="Facebook" width="50" height="50">
+            </a>
+            <a href="https://twitter.com/misawa.or.jp/" target="_blank">
+                <img src="images/twitter_logo.png" alt="Twitter" width="40" height="40">
+            </a>
+            <a href="https://www.instagram.com/misawa.or.jp/" target="_blank">
+                <img src="images/instagram_logo.png" alt="Instagram" width="50" height="50">
+            </a>
+        </div>
+
+        <div>
+            <p>Website Project</p>
+            <p>Cindy Jane Vick</p>
+            <p id="course"></p>
+            <p id="copywrite"></p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
