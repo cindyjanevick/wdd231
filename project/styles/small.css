@@ -1,10 +1,6 @@
+/* Responsive Design for Smaller Screens (max-width: 768px) */
 @media (max-width: 768px) {
-    .main-large {
-        grid-template-columns: 1fr;
-    }
-}
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
+    /* Calendar */
     #calendar {
         grid-template-columns: repeat(7, 1fr);
     }
@@ -16,6 +12,7 @@
         padding: 8px;
     }
 
+    /* Event Details */
     #event-details {
         padding: 12px;
     }
@@ -31,9 +28,35 @@
     #event-details a {
         font-size: 14px;
     }
+
+    /* Main Large */
+    .main-large {
+        grid-template-columns: 1fr;
+    }
+
+    /* Tours */
+    .tours {
+        grid-template-columns: 1fr; /* Stack the tour cards on top of each other */
+    }
+
+    .tour-card {
+        width: 100%;
+    }
+
+    /* Footer */
+    footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
+/* For smaller screens (max-width: 480px) */
 @media (max-width: 480px) {
+    header h1{
+        text-align: center;
+    }
     #calendar {
         grid-template-columns: repeat(7, 1fr);
     }
@@ -42,7 +65,7 @@
         width: 30px;
         height: 30px;
         font-size: 12px;
-        padding: 6px;
+        padding: 4px;
     }
 
     #event-details {
@@ -60,27 +83,14 @@
     #event-details a {
         font-size: 12px;
     }
-    footer{
-        display:grid;
+
+    footer {
+        display: grid;
         grid-template-columns: 1fr;
     }
 }
-@media (max-width: 768px) {
-    .tours {
-        grid-template-columns: 1fr; /* Stack the tour cards on top of each other */
-    }
 
-    .tour-card {
-        width: 100%;
-    }
-    footer {
-        
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-/* nav header */
+/* nav header for larger screens (min-width: 650px) */
 @media only screen and (min-width: 650px) {
     #myButton {
         display: none;
@@ -101,12 +111,15 @@
 
     nav {
         grid-template-rows: 1fr;
-    }}
+    }
+
     .pad {
         margin: 1rem 0 0.5rem 0;
         text-align: center;
     }
-/* For small screens (mobile devices) */
+}
+
+/* For mobile weather */
 @media screen and (max-width: 768px) {
     .weather {
         grid-template-columns: 1fr; /* Single column layout */

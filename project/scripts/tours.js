@@ -23,7 +23,32 @@ const tours = [
         image: "images/sumo.webp",
         cost: "¥10,500",
         duration: "3 hours"
+    },
+    {
+        id: 4,
+        name: "Kyoto Cultural Tour",
+        description: "Discover Kyoto's ancient temples, stunning gardens, and traditional tea houses. A journey through Japan’s historic heart.",
+        image: "images/kyoto.webp",
+        cost: "¥12,000",
+        duration: "6 hours"
+    },
+    {
+        id: 5,
+        name: "Osaka Nightlife Tour",
+        description: "Experience the vibrant nightlife of Osaka, including visits to popular bars, restaurants, and entertainment districts.",
+        image: "images/osaka.webp",
+        cost: "¥6,000",
+        duration: "4 hours"
+    },
+    {
+        id: 6,
+        name: "Hiroshima Peace Memorial Tour",
+        description: "A somber yet powerful visit to the Hiroshima Peace Memorial Park, exploring the city's tragic history and its message of peace.",
+        image: "images/hiroshima.webp",
+        cost: "¥8,000",
+        duration: "5 hours"
     }
+
 ];
 
 // Function to generate and display tour cards

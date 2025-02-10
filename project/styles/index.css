@@ -1,29 +1,32 @@
 :root {
     --back_color1: #333333;     /* Charcoal Gray */
     --back_color2: #4C4C4C;     /* Dark Slate Gray */
-    --back_color3: #666666;     /* Medium Gray */
-    --accent_color1: #F44336;   /* Bright Red */
+    --back_color3: #0B3F91;     /* Medium Gray */
+    --accent_color1: #e2756d;   /* Bright Red */
     --accent_color2: #E0E0E0;   /* Light Gray */
-    --accent_color3: #FFFFFF;   /* White */
+    --accent_color3: #5f839c;   /* White */
     --accent_color4: #212121;   /* Almost Black */
     --wild_red: #FF5252;        /* Vivid Red */
     --sunburst_red: #D32F2F;    /* Dark Red */
     --active_blue: #3498DB;     /* Soft Blue */
 } 
-
+/* GLOBAL CONTENT */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:"Delius", serif;
+    
 }
 
 body {
     font-family: 'Neuton', sans-serif;
-    margin: 0;
     padding: 0;
     background-color: #f8f4e3;
     line-height: 1.6;
     color: #333;
+    
+    
 }
 
 header {
@@ -31,36 +34,58 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #a3c6ff;
+    background-color: var(--accent_color3);
+   
+    
 }
-
+header,body{
+    max-width: 1000px;
+    margin:0 auto;
+}
 header h1 {
-    font-family: 'Delius', sans-serif;
     font-size: 2.5em;
     color: white;
+    margin-left: 1rem;
+    font-family: "Neuton", serif; /* Neuton for headings */
+}
+header, footer {
+    background-color: var(--back_color1); padding: 1rem;
+    color: white;
+    justify-content: center;
+    
+}
+header img {
+    height: auto;
+}
+/* HEADER CONTENT */
+
+.container {
+    /* display: grid; */
+    column-gap: 2px;
+    align-items: center;
 }
 
+.pad {
+    padding: 1rem;
+    font-size: 1rem;
+}
 button {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    margin: 0.25rem;
 }
 
-nav ul {
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    background-color: #76c7a1;
-    padding: 10px 0;
-    margin: 0;
+#myButton::before {
+    content: "≡";
+    background-color: var(--back_color1);
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+h2{
+    text-align: center;
 }
 
+/* hero image */
 .hero-image {
     position: relative;
     width: 100%;
@@ -102,7 +127,7 @@ nav a {
 #exchange-rate-box p {
     margin: 5px 0;
 }
-
+/* main */
 .main-large {
     padding: 40px 20px;
 }
@@ -114,9 +139,10 @@ nav a {
 }
 
 section {
-    background-color: #d9c1e1;
+    background-color: var(--accent_color2);
     padding: 20px;
     border-radius: 8px;
+    margin-bottom:20px;
 }
 
 
@@ -127,12 +153,13 @@ section {
     gap: 5px;
     margin: 20px 0;
     font-family: Arial, sans-serif;
+    /* background-color: var(--accent_color2); */
 }
 
 #calendar div {
     text-align: center;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--accent_color1);
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -238,9 +265,8 @@ button#learn-more-btn:hover {
 
 
 /* tours */
-/* tours */
 .tours {
-    background-color: #f2a0a0;
+    background-color: var(--accent_color1);
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -248,7 +274,9 @@ button#learn-more-btn:hover {
 /* Heading */
 .most-booked-heading {
     font-size: 24px;
-    color: #333;
+    color:var(--accent_color4);
+    background-color: white;
+    border-radius: 5px;
     margin-bottom: 20px; /* Add space between heading and cards */
 }
 /* tour-cards container */
@@ -258,14 +286,6 @@ button#learn-more-btn:hover {
     gap: 20px;
     min-height: 200px; /* Ensures the container is large enough */
 }
-
-
-/* Tour Card Styles */
-/* .tour-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-} */
 
 .tour-card {
     background: #fff;
@@ -283,7 +303,7 @@ button#learn-more-btn:hover {
 }
 
 .details-btn {
-    background: #007bff;
+    background: var(--active_blue);
     color: white;
     border: none;
     padding: 10px;
@@ -293,9 +313,8 @@ button#learn-more-btn:hover {
 }
 
 .details-btn:hover {
-    background: #0056b3;
+    background: var(--back_color3);
 }
-
 
 
 /* modal tours */
@@ -345,11 +364,21 @@ footer.container {
     min-height:100px;
 }
 /* HEADER - NAVIGATION STUFF HERE */
-nav {
+/* navigation */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
     background-color: var(--back_color1);
+    padding: 10px 0;
+    margin: 0;
 }
 
-
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
 ul.menuLinks li a {
     
@@ -372,6 +401,7 @@ nav {
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 0.5s ease-out;
+    background-color: var(--back_color1);
 }
 
 nav ul {overflow: hidden;}
@@ -406,74 +436,7 @@ ul.menuLinks li a.active {
     /* additions */
     
 }
-/* GLOBAL CONTENT */
 
-* {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Delius", serif;
-}
-
-/* COMMON HEADER/FOOTER CONTENT */
-
-header, footer {
-    background-color: var(--back_color1); padding: 1rem;
-    color: white;
-    justify-content: center;
-    
-}
-
-header, body {
-    margin: 0 auto;
-    max-width: 1000px;
-}
-
-/* HEADER CONTENT */
-
-.container {
-    /* display: grid; */
-    column-gap: 2px;
-    align-items: center;
-}
-
-.pad {
-    padding: 1rem;
-    font-size: 1rem;
-}
-
-header {
-    display: flex;
-   
-}
-
-/* more additions */
-header h1 {
-    font-size: 1.75rem;
-    margin-left: 1rem;
-    font-family: "Neuton", serif; /* Neuton for headings */
-}
-
-header img {
-    height: auto;
-}
-/* end of additions */
-h1 {
-    font-size: 1.5rem;
-    grid-row: 3 / 4 ;
-}
-
-button {
-    margin: 0.25rem;
-}
-
-#myButton::before {
-    content: "≡";
-    background-color: var(--back_color1);
-}
-
-h2{
-    text-align: center;
-}
 
 /* Styling for the weather section */
 .weather {
@@ -483,7 +446,11 @@ h2{
     text-align: center;
     margin: 20px;
 }
-
+.weather h2{
+    background-color: var(--back_color2);
+    color:white;
+    border-radius: 5px;
+}
 /* Grid container for current weather and forecast */
  #forecast {
     display: grid;

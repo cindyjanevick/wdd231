@@ -17,8 +17,28 @@ const events = [
         name: 'Event 3: Tokyo Marathon',
         description: 'Watch the runners at Tokyo Marathon and experience the excitement of the city.',
         url: 'https://www.marathon.tokyo/en/participants/guideline/'
+    },
+    {
+        date: '2025-02-21',
+        name: 'Event 4: Tokyo International Art Fair',
+        description: 'Explore contemporary art at the Tokyo International Art Fair, showcasing works by global artists.',
+        url: 'https://www.tokyoartfair.com'
+    },
+    {
+        date: '2025-02-23',
+        name: 'Event 5: Tokyo Jazz Festival',
+        description: 'Enjoy live performances by world-renowned jazz musicians at the Tokyo Jazz Festival.',
+        url: 'https://www.tokyo-jazz.com/en'
+    },
+    {
+        date: '2025-02-26',
+        name: 'Event 6: Tokyo Fashion Week',
+        description: 'Catch the latest trends at Tokyo Fashion Week, where top designers showcase their new collections.',
+        url: 'https://www.tokyofashionweek.com/en/'
     }
 ];
+
+
 
 // Function to create the calendar
 function createCalendar(year, month) {
