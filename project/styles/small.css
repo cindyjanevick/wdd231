@@ -138,3 +138,17 @@
         grid-template-columns: 1fr; /* Single column layout */
     }
 }
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 10px;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    form input, form select, form textarea {
+        font-size: 0.9rem;
+    }
+}

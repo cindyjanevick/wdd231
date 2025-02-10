@@ -1,16 +1,51 @@
 [
     {
+        "id": 1,
         "name": "Tokyo City Tour",
-        "cost": "50 USD",
-        "start_time": "2025-03-10T09:00:00Z",
-        "url": "https://example.com/tokyo-city-tour",
-        "description": "Explore Tokyo's iconic landmarks, including the Tokyo Tower and Shibuya Crossing."
+        "description": "Explore the most iconic landmarks in Tokyo, guided by local experts. Includes transportation and entrance fees.",
+        "image": "images/tokyotour.webp",
+        "cost": "¥7,500",
+        "duration": "4 hours"
     },
     {
-        "name": "Mount Fuji Day Trip",
-        "cost": "120 USD",
-        "start_time": "2025-04-05T08:00:00Z",
-        "url": "https://example.com/mount-fuji-day-trip",
-        "description": "Take a scenic day trip to Mount Fuji, including a guided hike and lunch."
+        "id": 2,
+        "name": "Mt. Fuji Day Trip",
+        "description": "A scenic full-day tour to Japan’s tallest mountain, including breathtaking views and cultural experiences.",
+        "image": "images/fuji.webp",
+        "cost": "¥18,000",
+        "duration": "8 hours"
+    },
+    {
+        "id": 3,
+        "name": "Sumo Experience",
+        "description": "Witness the strength of sumo wrestlers up close and learn about the history of Japan’s national sport.",
+        "image": "images/sumo.webp",
+        "cost": "¥10,500",
+        "duration": "3 hours"
+    },
+    {
+        "id": 4,
+        "name": "Kyoto Cultural Tour",
+        "description": "Discover Kyoto's ancient temples, stunning gardens, and traditional tea houses. A journey through Japan’s historic heart.",
+        "image": "images/kyoto.webp",
+        "cost": "¥12,000",
+        "duration": "6 hours"
+    },
+    {
+        "id": 5,
+        "name": "Osaka Nightlife Tour",
+        "description": "Experience the vibrant nightlife of Osaka, including visits to popular bars, restaurants, and entertainment districts.",
+        "image": "images/osaka.webp",
+        "cost": "¥6,000",
+        "duration": "4 hours"
+    },
+    {
+        "id": 6,
+        "name": "Hiroshima Peace Memorial Tour",
+        "description": "A somber yet powerful visit to the Hiroshima Peace Memorial Park, exploring the city's tragic history and its message of peace.",
+        "image": "images/hiroshima.webp",
+        "cost": "¥8,000",
+        "duration": "5 hours"
     }
+
 ]
