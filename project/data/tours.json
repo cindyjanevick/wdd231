@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Tokyo City Tour",
+        "cost": "50 USD",
+        "start_time": "2025-03-10T09:00:00Z",
+        "url": "https://example.com/tokyo-city-tour",
+        "description": "Explore Tokyo's iconic landmarks, including the Tokyo Tower and Shibuya Crossing."
+    },
+    {
+        "name": "Mount Fuji Day Trip",
+        "cost": "120 USD",
+        "start_time": "2025-04-05T08:00:00Z",
+        "url": "https://example.com/mount-fuji-day-trip",
+        "description": "Take a scenic day trip to Mount Fuji, including a guided hike and lunch."
+    }
+]

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Tokyo Travel Guide Homepage by Cindy Jane Vick">
+        <meta name="author" content="Cindy Jane Vick">
+        <title>Tokyo Travel Guide Homepage</title>
+
+        <!-- Social media meta tags -->
+        <meta property="og:title" content="Tokyo Travel Guide Homepage">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Tokyo Travel Guide Homepage developed by Cindy Vick.">
+        <meta property="og:image" content="https://cindyjanevick.github.io/wdd231/chamber/images/misawa_shi.webp">
+        <meta property="og:url" content="https://cindyjanevick.github.io/wdd231/chamber/directory.html#">
+
+        <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/small.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Delius&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+        <script src="scripts/footer.js" defer></script>
+        <script src="scripts/menu.js" defer></script>
+        <script src="scripts/exchange.js"defer></script>
+        <script src="scripts/events.js" defer></script>
+        <script src="scripts/time.js" defer></script>
+        
+        <script src="scripts/tours.js" defer></script>
+       
+        <script src="scripts/weather.js" defer></script> 
+    </head>
+    <body>
+        <header class="container">
+            <div>
+                <img src="images/logo2.png" alt="Tokyo Travel Logo" loading="lazy" width="100" height="90">
+            </div>
+            <div class="pad">
+                <h1>Tokyo Travel Guide</h1>            
+            </div>
+            <button id="myButton" aria-label="Tokyo Travel Logo"></button>
+        </header>
+
+        <nav id="animateme">
+            <ul class="menuLinks">
+                <li><a href="index.html" title="Home" class="active">Home</a></li>
+                <li><a href="attractions.html" title="Attractions">Attractions</a></li>
+                <li><a href="restaurants.html" title="Restaurants">Restaurants</a></li>
+                <li><a href="contactus.html" title="Contact Us">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-image">
+            <img class="hero-image" src="images/tokyobanner.webp" loading="lazy" alt="Tokyo Skyline">
+            <div class="hero-text">
+                <a href="#" id="current-time">Current Time : Loading...</a>
+            </div>
+            <!-- Exchange Rate Box -->
+            <div id="exchange-rate-box">
+                <p><strong>Exchange Rates:</strong></p>
+                <p id="usd-to-yen">Loading...</p>
+                <p id="eur-to-yen">Loading...</p>
+            </div>
+        </div>
+        
+        
+
+        <main class="main-large">
+
+            <section class="events">
+                <h2>Events</h2>
+                <!-- Calendar -->
+                <div id="calendar"></div>
+                <div id="event-details" class="hidden">
+                    <h3 id="event-name"></h3>
+                    <p id="event-description"></p>
+                    <a id="event-link" href="#" target="_blank">Learn More</a>
+                </div>
+            </section>
+            
+            <!-- Modal for Event Details -->
+                <div id="event-modal-details" class="modal-event">
+                    <div class="modal-content">
+                        <span id="close-modal-btn">&times;</span>
+                        <div id="modal-event-details"></div> <!-- Event details will be injected here -->
+                    </div>
+                </div>
+
+            
+            
+            
+
+            <section id="home" class="content-section">
+                <div class="weather">
+                    <h2>Current Weather</h2>
+                    <div id="current-weather">
+                        <!-- Current weather data will be populated here by your weather.js -->
+                    </div>
+                    
+                    <h2>Weather Forecast</h2>
+                    <div id="forecast">
+                        <!-- 3-day forecast data will be populated here by your weather.js -->
+                    </div>
+                </div>
+
+                <!-- Other sections like Events and Tours go here -->
+
+            </section>
+
+            <section class="tours">
+                <h2 class="most-booked-heading">Most Booked Tour</h2>
+                <div id="tours-list" class="tour-cards">
+                    <!-- Tour cards go here -->
+                </div>
+            </section>
+            
+
+            <!-- Modal for Tour Details -->
+            <div id="tour-modal" class="modal">
+                <div class="modal-content" id="modal-content">
+                    <span id="close-tour-modal-btn" class="close-btn">&times;</span>
+                    <div id="tour-details"></div>
+                    <!-- <h2>Tour Details</h2>
+                    <p>Details go here...</p> -->
+                </div>
+            </div>
+        </main>
+
+        <footer class="container">
+            <div>
+                <img src="images/logo2.png" alt="Tokyo Travel Logo" loading="lazy" width="100" height="90">
+                <p>Tokyo Travel Guide</p>
+                <p>2-1-1 Sawai-Cho, Tokyo</p>
+                <p>Minato, 033-0011</p>
+                <p>0176-53-2175</p>
+                <p>http://www.ttg.or.jp/</p>
+            </div>
+            <div>
+                <a href="https://www.facebook.com/misawa.or.jp/" target="_blank">
+                    <img src="images/facebook_logo.png" alt="Facebook" width="50" height="50">
+                </a>
+                <a href="https://twitter.com/misawa.or.jp/" target="_blank">
+                    <img src="images/twitter_logo.png" alt="Twitter" width="40" height="40">
+                </a>
+                <a href="https://www.instagram.com/misawa.or.jp/" target="_blank">
+                    <img src="images/instagram_logo.png" alt="Instagram" width="50" height="50">
+                </a>
+            </div>
+
+            <div>
+                <p>WDD 231 Website Project</p>
+                <p>Cindy Jane Vick</p>
+                <p id="copywrite"></p>
+                <p id="lastModified"></p>
+            </div>
+        </footer>
+    </body>
+</html>

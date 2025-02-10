@@ -1,0 +1,114 @@
+@media (max-width: 768px) {
+    .main-large {
+        grid-template-columns: 1fr;
+    }
+}
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    #calendar {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    #calendar div {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #event-details {
+        padding: 12px;
+    }
+
+    #event-details h3 {
+        font-size: 20px;
+    }
+
+    #event-details p {
+        font-size: 14px;
+    }
+
+    #event-details a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #calendar {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    #calendar div {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    #event-details {
+        padding: 10px;
+    }
+
+    #event-details h3 {
+        font-size: 18px;
+    }
+
+    #event-details p {
+        font-size: 12px;
+    }
+
+    #event-details a {
+        font-size: 12px;
+    }
+    footer{
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 768px) {
+    .tours {
+        grid-template-columns: 1fr; /* Stack the tour cards on top of each other */
+    }
+
+    .tour-card {
+        width: 100%;
+    }
+    footer {
+        
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* nav header */
+@media only screen and (min-width: 650px) {
+    #myButton {
+        display: none;
+    }
+
+    ul.menuLinks,
+    ul.menuLinks.open {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: baseline;
+        margin: 1rem 0 0.5rem 0;
+        background-color: var(--accent_color4);
+    }
+
+    ul.menuLinks a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    nav {
+        grid-template-rows: 1fr;
+    }}
+    .pad {
+        margin: 1rem 0 0.5rem 0;
+        text-align: center;
+    }
+/* For small screens (mobile devices) */
+@media screen and (max-width: 768px) {
+    .weather {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+}

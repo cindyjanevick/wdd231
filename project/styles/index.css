@@ -1,0 +1,528 @@
+:root {
+    --back_color1: #333333;     /* Charcoal Gray */
+    --back_color2: #4C4C4C;     /* Dark Slate Gray */
+    --back_color3: #666666;     /* Medium Gray */
+    --accent_color1: #F44336;   /* Bright Red */
+    --accent_color2: #E0E0E0;   /* Light Gray */
+    --accent_color3: #FFFFFF;   /* White */
+    --accent_color4: #212121;   /* Almost Black */
+    --wild_red: #FF5252;        /* Vivid Red */
+    --sunburst_red: #D32F2F;    /* Dark Red */
+    --active_blue: #3498DB;     /* Soft Blue */
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Neuton', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f4e3;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #a3c6ff;
+}
+
+header h1 {
+    font-family: 'Delius', sans-serif;
+    font-size: 2.5em;
+    color: white;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    background-color: #76c7a1;
+    padding: 10px 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text a {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Position the exchange rate box in the bottom-right corner */
+#exchange-rate-box {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#exchange-rate-box p {
+    margin: 5px 0;
+}
+
+.main-large {
+    padding: 40px 20px;
+}
+
+.content-section {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    gap: 20px;
+}
+
+section {
+    background-color: #d9c1e1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+/* Calendar styles */
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for the days of the week */
+    gap: 5px;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+#calendar div {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#calendar .event-day {
+    font-weight: bold;
+    background-color: #f0f0f0;
+    color: #1a73e8;
+}
+
+#calendar .event-day:hover {
+    background-color: #e0e0e0;
+}
+
+/* Event Details Section */
+#event-details {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#event-details h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+#event-details p {
+    font-size: 16px;
+    color: #666;
+}
+
+#event-details a {
+    text-decoration: none;
+    color: #1a73e8;
+    font-weight: bold;
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#event-details a:hover {
+    background-color: #1a73e8;
+    color: white;
+}
+/* events */
+/* Modal Background */
+.modal-event {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* Close Button */
+#close-modal-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#close-modal-btn:hover,
+#close-modal-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style for Learn More button events*/
+button#learn-more-btn {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+button#learn-more-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+
+/* tours */
+/* tours */
+.tours {
+    background-color: #f2a0a0;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+/* Heading */
+.most-booked-heading {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px; /* Add space between heading and cards */
+}
+/* tour-cards container */
+.tour-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    min-height: 200px; /* Ensures the container is large enough */
+}
+
+
+/* Tour Card Styles */
+/* .tour-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+} */
+
+.tour-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.tour-image {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.details-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.details-btn:hover {
+    background: #0056b3;
+}
+
+
+
+/* modal tours */
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 500px;
+    position: relative;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* footer */
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}
+
+footer.container {
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    min-height:100px;
+}
+/* HEADER - NAVIGATION STUFF HERE */
+nav {
+    background-color: var(--back_color1);
+}
+
+
+
+ul.menuLinks li a {
+    
+    display: block;
+    padding: .75rem 1vw;
+    color: #fff;
+    text-decoration: none;
+}
+
+ul.menuLinks {
+    list-style-type: none; 
+    padding: 0;
+}
+
+#myButton.open::before {
+    content: "x";
+}
+
+nav {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+nav ul {overflow: hidden;}
+
+nav.open {
+    grid-template-rows: 1fr;
+}
+
+/* Add the 📌 emoji to the active navigation item */
+ul.menuLinks li a.active::before {
+    content: "📌";
+    margin-right: 0.5rem;  /* Optional: Add space between the emoji and the link text */
+}
+
+/* Optionally, style the active link */
+ul.menuLinks li a.active {
+    color: var(--accent_color3); /* Change color when active */
+    font-weight: bold; /* Optional: Make it bold */
+}
+
+
+ /* HEADER - HAMBURGER BUTTON SETTINGS */
+ #myButton {
+    font-size: 2rem;
+    background-color: var(--back_color1);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    /* width: 100%; */
+    text-align: right;
+    padding: .25rem 2vw;
+    /* additions */
+    
+}
+/* GLOBAL CONTENT */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Delius", serif;
+}
+
+/* COMMON HEADER/FOOTER CONTENT */
+
+header, footer {
+    background-color: var(--back_color1); padding: 1rem;
+    color: white;
+    justify-content: center;
+    
+}
+
+header, body {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+/* HEADER CONTENT */
+
+.container {
+    /* display: grid; */
+    column-gap: 2px;
+    align-items: center;
+}
+
+.pad {
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+header {
+    display: flex;
+   
+}
+
+/* more additions */
+header h1 {
+    font-size: 1.75rem;
+    margin-left: 1rem;
+    font-family: "Neuton", serif; /* Neuton for headings */
+}
+
+header img {
+    height: auto;
+}
+/* end of additions */
+h1 {
+    font-size: 1.5rem;
+    grid-row: 3 / 4 ;
+}
+
+button {
+    margin: 0.25rem;
+}
+
+#myButton::before {
+    content: "≡";
+    background-color: var(--back_color1);
+}
+
+h2{
+    text-align: center;
+}
+
+/* Styling for the weather section */
+.weather {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Grid container for current weather and forecast */
+ #forecast {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid, adjusts depending on screen size */
+    gap: 20px;
+}
+
+/* Styling for the weather boxes (current and forecast) */
+.forecast-box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.forecast-box img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.forecast-day {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.forecast-temp {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.forecast-desc {
+    font-size: 1em;
+    color: #555;
+}
+
+
