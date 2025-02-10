@@ -1,4 +1,4 @@
-const apiKey = '08aeb8c7c4c9a14ed01d74a1'; // Replace with your API key
+const apiKey = '5570be89a2607b030a8d37b0'; // Replace with your API key
 const url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/JPY`; // Replace with your API endpoint
 
 // Function to fetch exchange rates
