@@ -54,38 +54,53 @@
         <section class="contact-section">
             <!-- Heading with emoji -->
             <h2>Contact Us ✨</h2>
-
-            <!-- Contact form with box container for layout -->
-            <form action="thankyou.html" method="GET" id="contact-form">
-                <label for="tour-name">Select Tour:</label>
-                <select id="tour-name" name="tour-name" required>
-                    <option value="" disabled selected>Select a Tour</option>
-                    <!-- Dynamic options will be populated here -->
-                </select>
-                <label for="tour-date">Select Date:</label>
-                <input type="date" id="tour-date" name="tour-date" required>
-
-                <label for="first-name">First Name:</label>
-                <input type="text" id="first-name" name="first-name" required>
     
-                <label for="last-name">Last Name:</label>
-                <input type="text" id="last-name" name="last-name" required>
+            <!-- Contact form and info with box container for layout -->
+            <div>
+                <!-- First column: The form -->
+                <form action="thankyou.html" method="GET" id="contact-form">
+                    <label for="tour-name">Select Tour:</label>
+                    <select id="tour-name" name="tour-name" required>
+                        <option value="" disabled selected>Select a Tour</option>
+                        <!-- Dynamic options will be populated here -->
+                    </select>
+                    <label for="tour-date">Select Date:</label>
+                    <input type="date" id="tour-date" name="tour-date" required>
     
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" required>
     
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required>
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" required>
     
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
     
-                <button type="submit">Submit</button>
-            </form>
-                
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+    
+                    <button type="submit">Submit</button>
+                </form>
+    
+                <!-- Second column: The map with contact info -->
+                <div class="contact-info">
+                    <h3>Our Location</h3>
+                    <p>We are located in the heart of Tokyo. Feel free to drop by or contact us for more details about our tours.</p>
+    
+                    <h4>Contact Info</h4>
+                    <p><strong>Email:</strong> info@tokyotours.com</p>
+                    <p><strong>Phone:</strong> +81 123 456 789</p>
+    
+                    <!-- Embed the map -->
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
             </div>
         </section>
-    </main>
     <footer class="container">
         <div>
             <img src="images/logo2.webp" alt="Tokyo Travel Logo" loading="lazy" width="100" height="90">
