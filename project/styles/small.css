@@ -6,11 +6,20 @@
     }
 
     #calendar div {
-        width: 40px;
-        height: 40px;
-        font-size: 14px;
-        padding: 8px;
+        font-size: 0.9rem; /* Reduce font size of days */
+        padding: 8px; /* Adjust padding */
     }
+    /* Adjust month name font size for small screens */
+    #calendar .month-name {
+    font-size: 1.2rem; /* Reduce font size */
+    }
+    /* Event day cell font weight adjustment */
+    #calendar .event-day {
+    font-size: 1.1rem; /* Ensure event days are visible on small screens */
+    }
+
+
+
 
     /* Event Details */
     #event-details {
@@ -57,15 +66,16 @@
     header h1{
         text-align: center;
     }
+     /* For even smaller screens */
+     #calendar .month-name {
+        font-size: 1rem; /* Even smaller font size for small phones */}
     #calendar {
         grid-template-columns: repeat(7, 1fr);
     }
 
     #calendar div {
-        width: 30px;
-        height: 30px;
-        font-size: 12px;
-        padding: 4px;
+        font-size: 0.8rem; /* Make font smaller */
+        padding: 6px; /* Reduce padding to fit the content */
     }
 
     #event-details {

@@ -49,6 +49,15 @@ function createCalendar(year, month) {
     const firstDay = new Date(year, month).getDay();
     const lastDate = new Date(year, month + 1, 0).getDate();
 
+    // Display the month at the top
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const monthDiv = document.createElement('div');
+    monthDiv.textContent = `${monthNames[month]} ${year}`;
+    monthDiv.style.gridColumn = "span 7"; // Make it span across all columns
+    monthDiv.style.textAlign = "center";
+    monthDiv.style.fontWeight = "bold";
+    calendarDiv.appendChild(monthDiv);
+    
     // Create days of the week header
     const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     daysOfWeek.forEach(day => {

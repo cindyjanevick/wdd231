@@ -156,6 +156,15 @@ section {
     /* background-color: var(--accent_color2); */
 }
 
+/* Month Name */
+#calendar .month-name {
+    grid-column: span 7; /* Ensure the month name spans the entire width of the calendar */
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px;
+}
+/* Calendar day cells */
 #calendar div {
     text-align: center;
     padding: 10px;
