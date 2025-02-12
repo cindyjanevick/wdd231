@@ -52,3 +52,5 @@ fetch('data/attractions.json')
 function showAttractionDetails(name) {
     alert(`You clicked on ${name}! Display more details about this attraction.`);
 }
+
+//asdfasdf
