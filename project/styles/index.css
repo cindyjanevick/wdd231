@@ -772,16 +772,87 @@ select {
 /* Contact Us Page */
 /* Basic styles for the contact section */
 .contact-section {
-    padding: 20px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;  /* Stack the content vertically */
+    align-items: center;  /* Center the content horizontally */
+    gap: 20px;
+    padding: 40px;
 }
-
+.contact-section > div {
+    display: grid;  /* Use grid for the form and map layout */
+    grid-template-columns: 1fr 1fr;  /* Two equal columns */
+    gap: 30px;  /* Space between the columns */
+    width: 100%;
+    max-width: 1200px;  /* Optional: Limit the width for larger screens */
+}
 /* Style for the Contact Us heading */
 .contact-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    text-align: center;  /* Center the heading */
+    width: 100%;  /* Ensure heading is full-width */
+}
+#contact-form {
+    flex: 1;
+    max-width: 600px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
+#contact-form select,
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#contact-form button {
+    background-color: #76c7a1; /* Use the color you prefer */
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#contact-form button:hover {
+    background-color: #64a38e;
+}
+
+/* Style the contact info section */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-info h3,
+.contact-info h4 {
+    color: #333;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.contact-info .map {
+    width: 100%;
+    height: 250px;  /* Set a height for the map */
+}
 /* Form container box */
 .form-container {
     display: flex;
@@ -797,10 +868,10 @@ select {
 
 /* Form styling */
 form {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;  /* Space between the form fields */
+    min-width: 300px;  /* Prevent the form from getting too small */
 }
 
 /* Form elements styling */

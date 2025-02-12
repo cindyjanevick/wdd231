@@ -68,6 +68,21 @@
     select {
         width: 100%; /* Make select inputs full width on smaller screens */
     }
+    /* contact */
+    .contact-section > div {
+        grid-template-columns: 1fr;  /* Stack the form and contact info in one column */
+        gap: 20px;
+    }
+
+    .contact-info {
+        width: 100%;  /* Full width for contact info on small screens */
+    }
+    .contact-info .map {
+        height: 200px;  /* Adjust map height for smaller screens */
+    }
+    /* form {
+        width: 100%;  /* Full width for the form on small screens */
+     
 }
 
 /* For smaller screens (max-width: 480px) */
