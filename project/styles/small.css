@@ -59,6 +59,15 @@
         flex-direction: column;
         text-align: center;
     }
+    /* restaurants */
+    .filter-options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    select {
+        width: 100%; /* Make select inputs full width on smaller screens */
+    }
 }
 
 /* For smaller screens (max-width: 480px) */

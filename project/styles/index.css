@@ -625,13 +625,16 @@ ul.menuLinks li a.active {
 
 .filter-options {
     display: flex;
+    flex-wrap: wrap; /* Allow the filters to wrap on smaller screens */
     justify-content: center;
     gap: 15px;
+    margin-bottom: 20px;
 }
 
 select {
     padding: 5px;
     font-size: 1rem;
+    min-width: 120px; /* Ensure select boxes are large enough */
 }
 
 /* Sorting Option */
