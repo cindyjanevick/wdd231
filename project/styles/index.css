@@ -817,7 +817,7 @@ select {
 }
 
 #contact-form button {
-    background-color: #76c7a1; /* Use the color you prefer */
+    background-color: var(--back_color3); /* Use the color you prefer */
     color: white;
     padding: 12px 18px;
     border: none;
