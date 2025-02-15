@@ -751,7 +751,8 @@ select {
 }
 
 .thank-you-button:hover {
-    background-color: var(--active_blue);
+    background-color: var(--accent_color4);
+    
 }
 
 /* Back to home link styles */
