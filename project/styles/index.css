@@ -656,11 +656,19 @@ select {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.5s ease-in-out;
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(20px); /* Adjusted for smoother effect */
+    will-change: transform, opacity;
 }
 
+/* Ensure animation applies */
+.restaurant-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Image Styling */
 .restaurant-card img {
     width: 100%;
     height: auto;
@@ -677,16 +685,12 @@ select {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.fade-in {
-    animation: fadeIn 0.5s ease-in-out forwards;
 }
 
 /* Page Heading Animation */
@@ -703,6 +707,11 @@ select {
         transform: scale(1);
     }
 }
+
+.page-heading {
+    animation: bounceIn 0.6s ease-in-out;
+}
+
 
 /* Thank You Page */
 /* Thank You Page */

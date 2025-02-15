@@ -18,7 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Function to display restaurant cards
     function displayRestaurants(restaurants) {
         restaurantsContainer.innerHTML = "";
-        restaurants.forEach(restaurant => {
+
+        restaurants.forEach((restaurant, index) => {
             const card = document.createElement("article");
             card.classList.add("restaurant-card");
 
@@ -34,12 +35,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p><strong>Cost:</strong> ${restaurant.cost}</p>
                 </div>
             `;
+
             restaurantsContainer.appendChild(card);
 
-            // Animation effect on load
+            // Delayed animation effect on load
             setTimeout(() => {
-                card.classList.add("fade-in");
-            }, 100);
+                card.classList.add("show"); // Applies fade-in effect
+            }, index * 150); // Creates a staggered effect
         });
     }
 
@@ -67,9 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             case "name":
                 return restaurants.sort((a, b) => a.name.localeCompare(b.name));
             case "cost":
-                return restaurants.sort((a, b) => {
-                    return getNumericCost(a.cost) - getNumericCost(b.cost);
-                });
+                return restaurants.sort((a, b) => getNumericCost(a.cost) - getNumericCost(b.cost));
             default:
                 return restaurants;
         }
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Helper function to extract numeric cost from cost string (removes non-numeric characters)
     function getNumericCost(cost) {
-        return parseInt(cost.replace(/[^0-9]/g, "")); // Removes all non-numeric characters
+        return parseInt(cost.replace(/[^0-9]/g, "")) || 0; // Removes all non-numeric characters
     }
 
     // Helper function to categorize cost levels based on numeric cost
