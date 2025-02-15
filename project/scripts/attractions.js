@@ -11,14 +11,30 @@ fetch('data/attractions.json')
             attractions.forEach(attraction => {
                 const card = document.createElement('div');
                 card.classList.add('attraction-card');
-                card.innerHTML = `
-                    <img src="${attraction.image_url}" alt="${attraction.name}" class="attraction-image" loading="lazy">
+
+                // For above-the-fold images, remove lazy loading
+                const image = document.createElement('img');
+                image.src = attraction.image_url;
+                image.alt = attraction.name;
+                image.classList.add('attraction-image');
+                image.width = 800; // Adjust image width and height as per your needs
+                image.height = 600;
+
+                // Check if the image is above-the-fold (e.g., first attraction or critical content)
+                if (attraction === data[0]) { // Change condition based on your layout
+                    image.removeAttribute('loading'); // Remove lazy loading for the first attraction
+                } else {
+                    image.setAttribute('loading', 'lazy'); // Apply lazy loading to others
+                }
+
+                card.appendChild(image);
+                card.innerHTML += `
                     <h3>${attraction.name}</h3>
                     <p>${attraction.address}</p>
                     <p>${attraction.description}</p>
                     <p><strong>Cost:</strong> ${attraction.cost}</p>
                     <a href="${attraction.url}" target="_blank">
-                    <button class="learn-more-btn-attraction">Learn More</button>
+                        <button class="learn-more-btn-attraction">Learn More</button>
                     </a>
                 `;
                 attractionsContainer.appendChild(card);
@@ -52,5 +68,3 @@ fetch('data/attractions.json')
 function showAttractionDetails(name) {
     alert(`You clicked on ${name}! Display more details about this attraction.`);
 }
-
-//asdfasdf
