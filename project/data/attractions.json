@@ -5,7 +5,7 @@
       "description": "Experience the energy of the world's busiest pedestrian crossing, where hundreds cross from all directions simultaneously.",
       "cost": "Free",
       "categories": ["Culture"],
-      "image_url": "https://images.pexels.com/photos/3402955/pexels-photo-3402955.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "image_url": "images/crossing.webp",
       "url":"https://en.wikipedia.org/wiki/Shibuya_Crossing"
   },
   {
@@ -14,7 +14,7 @@
       "description": "Dive into Tokyo's hub for electronics, anime, and manga. Explore multi-story stores, themed cafes, and arcades.",
       "cost": "Varies; entry to most stores is free",
       "categories": ["Culture"],
-      "image_url": "https://images.pexels.com/photos/30560602/pexels-photo-30560602/free-photo-of-vibrant-nightlife-in-akihabara-tokyo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "image_url": "images/akihabara.webp",
       "url":"https://en.wikipedia.org/wiki/Akihabara"
   },
   {
@@ -23,7 +23,7 @@
       "description": "Immerse yourself in interactive digital art installations that engage all your senses.",
       "cost": "¥3,200 for adults",
       "categories": ["Paid"],
-      "image_url": "https://greatertokyo.jp/wp-content/uploads/2024/02/01_Universe-of-Water-Particles-on-a-Rock-where-People-Gather_main_re.jpg",
+      "image_url": "images/teamlab.webp",
       "url":"https://www.teamlab.art/jp/e/planets/"
   },
   {
@@ -32,7 +32,7 @@
       "description": "Experience the magic at Tokyo Disneyland or the unique nautical-themed DisneySea.",
       "cost": "¥7,900 for adults",
       "categories": ["Paid"],
-      "image_url": "https://media2.tokyodisneyresort.jp/home/top/main/2025/01/mainL_01.jpg",
+      "image_url": "images/disney.webp",
       "url":"https://www.tokyodisneyresort.jp/en/tdl/"
   },
   {
@@ -41,7 +41,7 @@
       "description": "Savor fresh seafood, sushi, and traditional snacks in this bustling market.",
       "cost": "Varies; no entry fee",
       "categories": ["Free"],
-      "image_url": "https://images.pexels.com/photos/18848579/pexels-photo-18848579/free-photo-of-people-at-tsukiji-market-at-night-tokyo-japan.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "image_url": "images/suji.webp",
       "url":"https://www.tsukiji.or.jp/english/"
   },
   {
@@ -50,7 +50,7 @@
       "description": "Visit Tokyo's oldest Buddhist temple, explore Nakamise Shopping Street, and experience traditional culture.",
       "cost": "Free",
       "categories": ["Culture"],
-      "image_url": "https://images.pexels.com/photos/861446/pexels-photo-861446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "image_url": "images/sensoji.webp",
       "url":"https://www.senso-ji.jp/english/"
   },
   {
@@ -59,7 +59,7 @@
       "description": "Delve into the world of Studio Ghibli with exhibits, short films, and art displays.",
       "cost": "¥1,000 for adults",
       "categories": ["Paid"],
-      "image_url": "https://www.tokyoupdates.metro.tokyo.lg.jp/en/assets_c/2022/12/J-165_1_Z6D_9913-thumb-1600x900---4945.jpg",
+      "image_url": "images/ghibli.webp",
       "url":"https://www.ghibli-museum.jp/en/"
   },
   {
@@ -68,7 +68,7 @@
       "description": "Relish grilled skewers and drinks in this nostalgic alleyway filled with tiny eateries.",
       "cost": "Varies; no entry fee",
       "categories": ["Free"],
-      "image_url": "https://japan-tattoo.jp/wp-content/uploads/2019/10/Shinjuku-Omoide-Yokocho-v01.jpg",
+      "image_url": "images/shinjuku.webp",
       "url":"https://en.shinjuku-omoide.com/"
   },
   {
@@ -77,7 +77,7 @@
       "description": "A vast garden featuring Japanese, English, and French landscapes, ideal for relaxation.",
       "cost": "¥500 for adults",
       "categories": ["Nature"],
-      "image_url": "https://images.pexels.com/photos/19658293/pexels-photo-19658293/free-photo-of-stone-pines-in-garden-in-tokyo-japan.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "image_url": "images/garden.webp",
       "url":"https://www.env.go.jp/garden/shinjukugyoen/english/index.html"
   },
   {
@@ -86,7 +86,7 @@
       "description": "Explore this vibrant street known for its trendy shops, unique fashion, and delicious crepes.",
       "cost": "Varies; no entry fee",
       "categories": ["Culture"],
-      "image_url": "https://japancrate.com/cdn/shop/articles/shutterstock_2017501172.jpg?v=1724997533",
+      "image_url": "images/takeshita.webp",
       "url":"https://en.wikipedia.org/wiki/Harajuku"
   },
   {
@@ -95,7 +95,7 @@
       "description": "Enjoy coffee while interacting with owls, cats, hedgehogs, and other cute animals in unique themed cafés.",
       "cost": "¥1,000 - ¥2,000 per hour",
       "categories": ["Paid"],
-      "image_url": "https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/02/a0002888/img/basic/a0002888_main.jpg",
+      "image_url": "images/cafe.webp",
       "url":"https://harajukukawaiiland-kyunkyun.com/"
   },
   {
@@ -104,7 +104,7 @@
       "description": "Watch sumo wrestlers train up close in a traditional sumo stable.",
       "cost": "Free (but some stables require reservations)",
       "categories": ["Culture"],
-      "image_url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/12/78/85.jpg",
+      "image_url": "images/sumo2.webp",
       "url":"https://arashio.net/tour_e.html"
   }
 ]
